@@ -1,0 +1,14 @@
+version: "3"
+services:
+  service_jekyll:
+    build:
+      context: .
+      dockerfile: ./docker/jekyll/Dockerfile
+    container_name: local_jekyll
+    volumes:
+      - ./source:/srv/jekyll
+    command: jekyll serve -s /srv/jekyll --livereload
+    init: true
+    ports:
+      - 4000:4000
+      - 35729:35729

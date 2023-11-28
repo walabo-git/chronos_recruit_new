@@ -1,0 +1,12 @@
+{
+  "js console.log": {
+    "prefix": "clg",
+    "body": ["console.log()"],
+    "description": "ログ"
+  },
+  "js console.log accent": {
+    "prefix": "clga",
+    "body": ["console.log(,'🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴')"],
+    "description": "ログ"
+  }
+}
