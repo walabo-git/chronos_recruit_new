@@ -6,7 +6,7 @@ services:
       dockerfile: ./docker/jekyll/Dockerfile
     container_name: local_jekyll
     volumes:
-      - ./source:/srv/jekyll
+      - ./docs:/srv/jekyll
     command: jekyll serve -s /srv/jekyll --livereload
     init: true
     ports:
