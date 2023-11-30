@@ -1,0 +1,8 @@
+---
+---
+
+@import "typography";
+
+.test {
+  @include blue-text;
+}
