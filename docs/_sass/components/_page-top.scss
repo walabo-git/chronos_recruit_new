@@ -1,0 +1,277 @@
+@use '../base/base' as *;
+
+.concept{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  @include mq(tb) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .concept-bg{
+    .concept-bg-l,.concept-bg-r{
+      position: absolute;
+      width: 0;
+      transition: .5s;
+      opacity: 0;
+    }
+    .concept-bg-l{
+      top: -21vw;
+      left: -15vw;
+    }
+    .concept-bg-r{
+      bottom: -21vw;
+      right: -15vw;
+    }
+    &.is-show{
+      .concept-bg-l,.concept-bg-r{
+        width: 55%;
+        opacity: 1;
+      }
+    }
+  }
+  .concept-wrap{
+    position: relative;
+    z-index: 10;
+  }
+  .concept-head{
+    font-size: 2.6rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--c-main);
+    @include mq(tb) {
+      font-size: 6rem;
+    }
+  }
+  .concept-content{
+    margin-top: calc(1em * 1.5);
+    font-size: 1.6rem;
+    @include mq(tb) {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.job{
+  .job-list{
+    margin-top: 20px;
+    width: calc(100% - 15px);
+    margin-left: 15px;
+    overflow-x: hidden;
+    @include mq(tb){
+      width: calc(100% - 30px);
+      margin-left: 30px;
+    }
+    @media (min-width : $pcwidth + 30px) {
+      width: calc(100% - (50% - #{$pcwidth} / 2));
+      margin-left: calc(50% - #{$pcwidth} / 2);
+    }
+  }
+  .card-job.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    width: 280px !important;
+    height:auto;
+    transition: .2s;
+    @include mq(tb){
+      width: 350px !important;
+    }
+    .card-thum{
+      width: 280px;
+      height: 220px;
+      @include mq(tb){
+        width: 350px;
+        height: 280px;
+      }
+    }
+    @include mq(sp){
+      &.swiper-slide-active{
+        transform: translateY(-20px);
+      }
+    }
+    @include mq(tb){
+      &.swiper-slide-next{
+        transform: translateY(-20px);
+      }
+    }
+  }//.card-job.swiper-slide
+
+  .job-pagination{
+    margin-top: 50px;
+    position: relative;
+    height: 70px;
+    max-width: var(--w-pc);
+    width: 100%;
+    margin-right: auto;
+    @include mq(tb){
+      height: 70px;
+    }
+    .swiper-pagination{
+      position: absolute;
+      top: 0;
+      right: 15px;
+      max-width: 360px;
+      width: 100%;
+      height: 4px;
+      margin-left: auto;
+      @include mq(tb){
+        top: 50%;
+        right: 200px;
+      }
+      @media (min-width : $pcwidth - 15px) {
+        right: 180px;
+      }
+    }
+    .swiper-pagination-progressbar-fill{
+      background: var(--c-main);
+    }
+    .swiper-pagination-progressbar{
+      background: var(--c-border);
+    }
+  }
+
+  .job-slidebtn{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    height: 40px;
+    @include mq(tb){
+      top: 0;
+      height: 70px;
+    }
+
+    .swiper-button-prev{
+      left: auto;
+      right: 65px;
+      transform: rotate(180deg);
+      @include mq(tb){
+        right: 100px;
+      }
+      @media (min-width : $pcwidth - 15px) {
+        right: 80px;
+      }
+    }
+    .swiper-button-next{
+      right: 15px;
+      @media (min-width : $pcwidth - 15px) {
+        right: 0;
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 20px;
+      height: 40px;
+      width: 40px;
+      @include mq(tb){
+        height: 70px;
+        width: 70px;
+      }
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: auto;
+      height: 40px;
+      width: 40px;
+      @include mq(pc) {
+        height: 70px;
+        width: 70px;
+      }
+    }
+  }//.job-slideBtn
+}//.job
+
+.interview{
+  @include hover;
+  .interview-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .interview-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .interview-title{
+        @include poppins;
+        color: var(--c-white);
+        font-size: clamp(3rem,10vw,9rem);
+        position: relative;
+        line-height: 1.3;
+        padding-left: .5em;
+        padding-right: .35em;
+        transform: scale(0,0);
+        transition: .8s;
+        &::before{
+          @include triangle;
+        }
+        &::after{
+          @include triangle-rev;
+        }
+        &::before,&::after{
+          border-width: 10px 10px 10px 0;
+          @include mq(tb){
+            border-width: 30px 30px 30px 0;
+          }
+        }
+        &.is-show{
+          transform: scale(1,1);
+        }
+      }
+    }
+  }//.interview-wrap
+}//.interview
+
+.recruitment{
+  .recruitment-list{
+    @include mq(sp) {
+      padding-left: var(--w-unit);
+      padding-right: var(--w-unit);
+    }
+    @include mq(tb){
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  .recruitment-item{
+    width: 100%;
+    height: 170px;
+    position: relative;
+    @include mq(pc) {
+      height: 230px;
+    }
+    .recruitment-title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--c-black);
+      width: 100%;
+      height: 100%;
+      transition: .3s;
+      color: var(--c-white);
+      font-size: 2.4rem;
+      font-weight: 600;
+      @include mq(tb) {
+        font-size: 3rem;
+      }
+      &:hover{
+        background-color: var(--c-main);
+      }
+    }
+    & + .recruitment-item{
+      @include mq(sp) {
+        border-top: 1px solid var(--c-white);
+      }
+      @include mq(tb) {
+        border-left: 1px solid var(--c-white);
+      }
+    }
+  }//.recruitment-item
+}//.recruitment

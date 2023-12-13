@@ -1,0 +1,183 @@
+@use '../base/base' as *;
+
+/* about */
+.p-about{
+  .p-about-origin{
+    .origin-bg{
+      background: url('../images/svg/about-bg.svg') no-repeat;
+      background-size: 35% auto;
+      background-position: right center;
+      @include mq(sp) {
+        padding-bottom: 100px;
+        background-size: auto 80px;
+        background-position: center bottom;
+      }
+    }
+    .origin-thum{
+      max-width: 580px;
+      width: 100%;
+    }
+    .origin-content{
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
+      @include mq(tb) {
+        font-size: 2.6rem;
+      }
+    }
+    .origin-catch{
+      width: 200px;
+      height: auto;
+      @include m-a;
+      @include mq(tb) {
+        width: 300px;
+      }
+    }
+  }//.p-about-origin
+  .p-about-business{
+    .business-list{
+      display: grid;
+      grid-template-columns:repeat(2, 1fr);
+      @include mq(tb) {
+        grid-template-columns:repeat(4, 1fr);
+      }
+    }
+  }
+  .p-about-group{
+    .group-map{
+      @include mq(sp) {
+        height: 250px;
+      }
+      @include mq(tb) {
+        display: flex;
+      }
+      iframe{
+        height: 100%;
+      }
+    }
+  }
+}//.p-about
+
+/* benefits */
+.p-benefits-box{
+  gap: 10px;
+  @include mq(tb){
+    gap: 20px 30px;
+    grid-template-rows: auto;
+    grid-template-columns:  350px auto;
+    grid-template-areas:
+      'box2 box2'
+      'box1 box3';
+  }
+  .benefits-box-thum{
+    @include mq(tb){
+      grid-area: box1;
+    }
+  }
+  .benefits-box-head{
+    @include mq(tb){
+      grid-area: box2;
+    }
+  }
+  .benefits-box-content{
+    @include mq(tb){
+      grid-area: box3;
+    }
+  }
+}//.p-benefits-box
+
+/* job */
+.p-job{
+  .job-point-list{
+    display: grid;
+    gap: 10px;
+    @include mq(tb){
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      transform: translateY(-50px);
+    }
+    & > *{
+      text-align: center;
+      color: var(--c-white);
+      font-size: clamp(2rem, 2vw, 2.6rem);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80px;
+      padding: 10px;
+      @include filter;
+      @include mq(tb){
+        // font-size: 2.6rem;
+        min-height: 150px;
+      }
+    }
+    .job-point-price, .job-point-benefit{
+      background-color: var(--c-main);
+    }
+    .job-point-note{
+      background-color: var(--c-black);
+    }
+    .job-point-price{
+      span{
+        line-height: 1;
+        font-size: clamp(5rem, 8vw, 8rem);
+        margin-left: .15em;
+        margin-right: .15em;
+        &.price-min{
+          font-size: clamp(3rem, 4vw, 4rem);
+        }
+      }
+    }
+  }//job-point-list
+  .job-point-wrap{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    gap: 30px;
+    @include mq(tb) {
+      display: grid;
+      grid-template-columns: 1fr 40%;
+      gap: 30px;
+      padding-bottom: 80px;
+    }
+    @include mq(pc){
+      grid-template-columns: 1fr 400px;
+    }
+    .job-point-head{
+      font-size: clamp(2.6rem, 5.3vw, 4rem);
+      font-weight: 600;
+    }
+  }
+  .job-summary{
+    display: grid;
+    gap: 30px;
+    @include mq(tb) {
+      grid-template-columns:repeat(2, 1fr);
+      gap: 30px 40px;
+      align-items: center;
+    }
+    &.rev{
+      @include mq(tb) {
+        & > *:first-child{
+          order: 2;
+        }
+        & > *:last-child{
+          order: 1;
+        }
+      }
+    }
+  }
+}//.p-job
+
+/* thanks */
+.p-thanks{
+  .mv-title{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    @include mq(tb) {
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+  }
+}

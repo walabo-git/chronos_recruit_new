@@ -1,0 +1,319 @@
+:root{
+  // color
+  --c-font : #333;
+  --c-main : #E70012; //231,0,18
+  --c-sub : #FFE8EA;
+  --c-bg : #F8F7F5;
+  --c-border : #D1D1D1;
+  --c-table : #F8F8F8;
+  --c-white :#fff;
+  --c-link : #1741B4;
+  --c-black : #111;
+
+  // width
+  --w-unit : 15px;
+  --w-pc :1170px;
+  --w-L: 930px;
+  --w-M: 800px;
+  --w-S: 720px;
+
+  //header-h
+  --header-pc : 80px;
+  --header-sp : 50px;
+}
+
+// width
+$container-L: 930px;
+$container-M: 800px;
+$container-S: 700px;
+
+$spwidth: 768px;
+$tbwidth: 768.1px;
+$pcwidth: 1170px;
+
+
+// Googleフォント
+@font-face {
+  font-family: 'Poppins';
+  src:
+  url('../font/Poppins-Medium.ttf') format('truetype'),//500
+  url('../font/Poppins-Medium.woff') format('woff'),
+  url('../font/Poppins-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:
+  url('../font/Poppins-SemiBold.ttf') format('truetype'),//600
+  url('../font/Poppins-SemiBold.woff') format('woff'),
+  url('../font/Poppins-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:
+  url('../font/Poppins-Bold.ttf') format('truetype'),//700
+  url('../font/Poppins-Bold.woff') format('woff'),
+  url('../font/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:
+  url('../font/Poppins-ExtraBold.ttf') format('truetype'),//800
+  url('../font/Poppins-ExtraBold.woff') format('woff'),
+  url('../font/Poppins-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src:
+  url('../font/Poppins-Black.ttf') format('truetype'),//900
+  url('../font/Poppins-Black.woff') format('woff'),
+  url('../font/Poppins-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin poppins {
+  font-family: 'Poppins',sans-serif;
+}
+
+@mixin mincho{
+  font-family: "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+@mixin hover{
+  transition: .3s;
+  &:hover{
+    opacity: .8;
+  }
+}
+
+@mixin m-a{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin filter{
+  filter: drop-shadow(0px 3px 6px rgba(0,0,0,.16));
+}
+
+
+// メディアクエリサイズ
+$breakpoint: (
+  sp: 'screen and (max-width: 768px)',
+  tb: 'screen and (min-width: 768.1px)',
+  pc: 'screen and (min-width: 1170px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+
+// 見出し装飾
+@mixin triangle{
+  position: absolute;
+  content: '';
+  display: block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--c-main) transparent transparent;
+  transform: rotate(45deg);
+  top: -2px;
+  left: -2px;
+}
+
+@mixin triangle-rev{
+  position: absolute;
+  content: '';
+  display: block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--c-main) transparent transparent;
+  transform: rotate(-135deg);
+  bottom: -2px;
+  right: -2px;
+}
+
+// リンク矢印
+$arrowcolor: (
+  main: '--c-main',
+  white: '--c-white'
+);
+
+@mixin arrow($ac) {
+  position: absolute;
+  content: '';
+  display: block;
+  border-top: 3px solid var(#{map-get($arrowcolor, $ac)});
+  border-right: 3px solid var(#{map-get($arrowcolor, $ac)});
+  transform: translateY(-50%) rotate(45deg);
+  top: 50%;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  transition: .3s;
+}
+
+/* 余白 */
+@for $i from 1 through 10 {
+  .mt#{$i}0{
+    margin-top: 10px * $i;
+  }
+  .mb#{$i}0{
+    margin-bottom: 10px * $i;
+  }
+  .pt#{$i}0{
+    padding-top: 10px * $i;
+  }
+  .pb#{$i}0{
+    padding-bottom: 10px * $i;
+  }
+}
+
+@include mq(sp){
+  @for $i from 1 through 10 {
+    .mt#{$i}0-sp{
+      margin-top: 10px * $i;
+    }
+    .mb#{$i}0-sp{
+      margin-bottom: 10px * $i;
+    }
+    .pt#{$i}0-sp{
+      padding-top: 10px * $i;
+    }
+    .pb#{$i}0-sp{
+      padding-bottom: 10px * $i;
+    }
+  }
+}//sp
+
+@include mq(tb){
+  @for $i from 1 through 10 {
+    .mt#{$i}0-pc{
+      margin-top: 10px * $i;
+    }
+    .mb#{$i}0-pc{
+      margin-bottom: 10px * $i;
+    }
+    .pt#{$i}0-pc{
+      padding-top: 10px * $i;
+    }
+    .pb#{$i}0-pc{
+      padding-bottom: 10px * $i;
+    }
+  }
+}//pc
+
+.mt5{
+  margin-top: 5px;
+}
+.mt15{
+  margin-top: 15px;
+}
+.mt25{
+  margin-top: 25px;
+}
+
+.mt-sec{
+  margin-top: 50px;
+  @include mq(tb) {
+    margin-top: 80px;
+  }
+}
+
+
+/*-----------
+フォントの設定
+-------------*/
+@include mq(sp){
+  $fsizes:( XS:1rem, SS:1.2rem,S:1.6rem, M:1.6rem, L:2rem, LL:2.2rem, XL:2.6rem);
+  @each $names, $size in $fsizes {
+    .f-#{$names}-sp,
+    .f-#{$names} {
+      font-size: $size;
+    }
+  }
+}//sp
+@include mq(tb){
+    $fsizes:( XS:1.2rem, SS:1.4rem, S:1.8rem, M:2rem, L:2.4rem, LL:2.6rem, XL:3rem);
+  @each $names, $size in $fsizes {
+    .f-#{$names}-pc,
+    .f-#{$names} {
+      font-size: $size;
+    }
+  }
+}//sp
+
+
+
+/*---------
+全体レイアウト
+------------*/
+html {
+  font-size: 62.5%;
+  font-family: "ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","Hiragino Sans", "ヒラギノ角ゴシック", "游ゴシック",YuGothic, Arial, "メイリオ", Meiryo, Helvetica, sans-serif;
+  color: var(--c-font);
+  line-height: 1.8;
+  position: relative;
+  scroll-behavior: smooth;
+  word-break: break-word;
+  font-weight: 500;
+}
+body {
+  font-size: 1.5rem;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 0;
+  z-index: -100;
+  background-color: var(--c-white);
+  @include mq(tb){
+    font-size: 1.6rem;
+  }
+  /* chrome safari opera */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    min-height: 100%;
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+iframe{
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a{
+  color: var(--c-font);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.is-pc{
+  @include mq(sp) {
+    display: none!important;
+  }
+}
+.is-sp{
+  @include mq(tb) {
+    display: none!important;
+  }
+}

@@ -1,0 +1,117 @@
+@use '../base/base' as *;
+
+/*スクロールアニメーション */
+@keyframes fade{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.is-anime{
+  &.fade{
+    opacity: 0;
+    transition: .8s;
+  }
+  &.up{
+    opacity: 0;
+    transition: .8s .5s;
+    transform: translateY(50px);
+  }
+  &.left{
+    opacity: 0;
+    transition: .8s .3s;
+    transform: translateX(-50px);
+  }
+  &.right{
+    opacity: 0;
+    transition: .8s .3s;
+    transform: translateX(50px);
+  }
+  &.zoom{
+    opacity: 0;
+    transition: .8s .1s;
+    transform: scale(0,0);
+  }
+  &.head{
+    transition: .5s .1s;
+    transform: translateX(-120%);
+    transform-origin: left top;
+  }
+}
+
+.is-anime.is-show {
+  &.fade{
+    animation: fade .8s linear .5s forwards;
+  }
+  &.up,&.left,&.right {
+    transform: none;
+    opacity: 1;
+  }
+  &.zoom{
+    transform: scale(1,1);
+    opacity: 1;
+  }
+  &.head{
+    transform: translateX(0);
+  }
+}
+
+/* ループ */
+.loop-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.loop-wrap ul {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.loop-wrap ul li {
+  display: inline-block;
+  min-width: 300px;
+  list-style: none;
+  text-align: center;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+.loop-wrap ul li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.loop-wrap ul:first-child {
+  animation: loop 80s -40s linear infinite;
+}
+
+.loop-wrap ul:last-child {
+  animation: loop2 80s linear infinite;
+}
+
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
