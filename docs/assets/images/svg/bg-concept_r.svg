@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="762.02" height="722.136" viewBox="0 0 762.02 722.136">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffe8ea"/>
+      <stop offset="1" stop-color="#ff7782"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffeaec"/>
+      <stop offset="1" stop-color="#ff9fa6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffccd1"/>
+      <stop offset="1" stop-color="#ffb2b9"/>
+    </linearGradient>
+  </defs>
+  <g id="グループ_3818" data-name="グループ 3818" transform="translate(156.015 831.525) rotate(-135)" opacity="0.365">
+    <rect id="長方形_4020" data-name="長方形 4020" width="83.436" height="625.768" transform="translate(0 154.7)" fill="url(#linear-gradient)"/>
+    <rect id="長方形_4022" data-name="長方形 4022" width="53.671" height="625.768" transform="translate(132.631 363.884)" fill="url(#linear-gradient-2)"/>
+    <rect id="長方形_4021" data-name="長方形 4021" width="21.554" height="625.768" transform="translate(105.56 303.793)" fill="#ffc3c8"/>
+    <rect id="長方形_4024" data-name="長方形 4024" width="6.184" height="527.23" transform="translate(227.13 244.452)" fill="#ffd6da"/>
+    <rect id="長方形_4025" data-name="長方形 4025" width="11.848" height="382.197" transform="translate(243.208 512.329)" fill="#ffc6cb"/>
+    <rect id="長方形_4026" data-name="長方形 4026" width="16.335" height="310.993" transform="translate(74.36 233.557)" fill="#ffc6cb"/>
+    <rect id="長方形_4023" data-name="長方形 4023" width="41.023" height="625.768" transform="translate(179.617 0)" fill="url(#linear-gradient-3)"/>
+  </g>
+</svg>

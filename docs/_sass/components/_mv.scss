@@ -1,0 +1,231 @@
+@use '../base/base' as *;
+.mv-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+}
+.mv-title{
+  .mv-en{
+    color: var(--c-main);
+    @include poppins;
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: inline-block;
+    line-height: 1.4;
+    position: relative;
+    padding-left: .2em;
+    padding-right: .2em;
+    @include mq(sp){
+      padding-top: .5em;
+      padding-bottom: .5em;
+    }
+    @include mq(tb){
+      padding-left: .6em;
+      padding-right: .6em;
+      font-size: 11rem;
+    }
+    &::before{
+      @include triangle;
+      border-width: 22px 22px 22px 0;
+      @include mq(tb){
+        border-width: 36px 36px 36px 0;
+      }
+    }
+    &::after{
+      @include triangle-rev;
+      border-width: 22px 22px 22px 0;
+      @include mq(tb){
+        border-width: 36px 36px 36px 0;
+      }
+    }
+  }
+  .mv-ja{
+    color: var(--c-white);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    // letter-spacing: .08em;
+
+    @include mq(tb){
+      font-size: 4.7rem;
+    }
+  }//.mv-ja
+}//.mv-title
+
+.mv-top{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  .mv-thum{
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }//.mv-thum
+  .mv-en{
+    color: var(--c-main);
+    @include poppins;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: .2em;
+    padding-right: .2em;
+    @include mq(sp){
+      padding-top: .5em;
+      padding-bottom: .5em;
+    }
+    @include mq(tb){
+      padding-left: .6em;
+      padding-right: .6em;
+      font-size: 11rem;
+    }
+    &::before{
+      @include triangle;
+      border-width: 22px 22px 22px 0;
+      @include mq(tb){
+        border-width: 36px 36px 36px 0;
+      }
+    }
+    &::after{
+      @include triangle-rev;
+      border-width: 22px 22px 22px 0;
+      @include mq(tb){
+        border-width: 36px 36px 36px 0;
+      }
+    }
+  }
+  .mv-ja{
+    color: var(--c-white);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    @include mq(sp) {
+      margin-top: 30px;
+    }
+    @include mq(tb){
+      font-size: 4.7rem;
+    }
+  }
+}//.mv-top
+
+.mv-page{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .mv-thum{
+    width: 100%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }//.mv-thum
+  .mv-en{
+    color: var(--c-main);
+    @include poppins;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: .5em;
+    padding-right: .5em;
+    @include mq(sp){
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    @include mq(tb){
+      padding-left: .7em;
+      padding-right: .7em;
+      font-size: 8rem;
+    }
+    &::before{
+      @include triangle;
+      border-width: 10px 10px 10px 0;
+      @include mq(tb){
+        border-width: 36px 36px 36px 0;
+      }
+    }
+    &::after{
+      @include triangle-rev;
+      border-width: 10px 10px 10px 0;
+      @include mq(tb){
+        border-width: 36px 36px 36px 0;
+      }
+    }
+  }
+  .mv-ja{
+    color: var(--c-white);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    @include mq(tb){
+      font-size: 2.4rem;
+    }
+  }
+}//.mv-page
+
+.mv-job{
+  .mv-job-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    .mv-job-wrap{
+      color: var(--c-white);
+      @include mq(sp){
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+      }
+      @include mq(tb){
+        max-width: var(--w-pc);
+        margin-top: 80px;
+        margin-left: var(--w-unit);
+        margin-right:var(--w-unit);
+      }
+      @include mq(pc){
+        margin-top: 100px;
+        @include m-a;
+      }
+      .mv-job-title{
+        background-color: var(--c-main);
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: .3em 40px;
+        display: inline-block;
+        @include mq(tb){
+          font-size: 3rem;
+          padding: .3em 80px;
+        }
+        @include mq(pc){
+          padding: .3em 100px;
+        }
+      }
+      .mv-job-pickup{
+        font-size: 1.8rem;
+        font-weight: 600;
+        @include mq(sp){
+          margin-left: 1em;
+        }
+        @include mq(tb){
+          font-size: clamp(3rem,4vw,5rem);
+        }
+      }
+    }
+  }
+}//.mv-job
