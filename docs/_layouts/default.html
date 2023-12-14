@@ -12,7 +12,7 @@
   <meta property="og:title" content="株式会社クロノス 採用サイト">
   <meta property="og:type" content="website">
   <meta property="og:url" content="/">
-  <meta property="og:image" content="/ogp.png">
+  <meta property="og:image" content="{{ '/assets/images/common/ogp.png' | relative_url }}">
   <meta property="og:site_name" content="株式会社クロノス 採用サイト">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary">
@@ -25,7 +25,7 @@
 
 <body>
   <div class="entry-btn">
-    <a href="#"><span>エントリーする</span></a>
+    <a href="{{ '/entry' | relative_url }}"><span>エントリーする</span></a>
   </div>
 
   <header class="header">
@@ -33,11 +33,11 @@
     <div class="header-inner">
 
       <div class="header-title">
-        <a href="#" class="header-logo">
-          <img src="/assets/images/svg/logo.svg" alt="クロノス">
+        <a href="{{ '/' | relative_url }}" class="header-logo">
+          <img src="{{ '/assets/images/svg/logo.svg' | relative_url }}"  alt="クロノス">
         </a>
         <div class="header-logo-sub">
-          <img src="/assets/images/svg/logo-sub.svg" alt="recruiting site">
+          <img src="{{ '/assets/images/svg/logo-sub.svg' | relative_url }}"  alt="recruiting site">
         </div>
       </div>
 
@@ -50,16 +50,16 @@
                 <p class="nav-head-en">ABOUT US</p>
               </div>
               <ul class="nav-content">
-                <li class="nav-item"><a href="/">クロノスを知る</a></li>
-                <li class="nav-item"><a href="/#">代表メッセージ</a></li>
+                <li class="nav-item"><a href="{{ '/about' | relative_url }}">クロノスを知る</a></li>
+                <li class="nav-item"><a href="{{ '/message' | relative_url }}">代表メッセージ</a></li>
               </ul>
               <div class="nav-head mt60-pc mt20-sp">
                 <p class="nav-head-ja">クロノスの仕事</p>
-                <p class="nav-head-en">OUR JOB</p>
+                <p class="nav-head-en">OUR work</p>
               </div>
               <ul class="nav-content">
-                <li class="nav-item"><a href="/">職種紹介</a></li>
-                <li class="nav-item"><a href="/#">インタビュー</a></li>
+                <li class="nav-item"><a href="{{ '/work' | relative_url }}">職種紹介</a></li>
+                <li class="nav-item"><a href="{{ '/interview' | relative_url }}">インタビュー</a></li>
               </ul>
             </div>
             <div class="nav-box mt20-sp">
@@ -68,15 +68,15 @@
                 <p class="nav-head-en">RECRUIT</p>
               </div>
               <ul class="nav-content">
-                <li class="nav-item"><a href="/">募集要項一覧</a></li>
-                <li class="nav-item"><a href="/#">福利厚生</a></li>
+                <li class="nav-item"><a href="{{ '/recruit' | relative_url }}">募集要項一覧</a></li>
+                <li class="nav-item"><a href="{{ '/benefits' | relative_url }}">福利厚生</a></li>
               </ul>
               <div class="nav-head mt20-pc mt20-sp">
                 <p class="nav-head-ja">お知らせ</p>
                 <p class="nav-head-en">NEWS</p>
               </div>
               <ul class="nav-content">
-                <li class="nav-item"><a href="/">お知らせ一覧</a></li>
+                <li class="nav-item"><a href="{{ '/news' | relative_url }}">お知らせ一覧</a></li>
               </ul>
             </div>
           </div>
@@ -108,7 +108,7 @@
     <div class="container">
 
       <div class="footer-logo">
-        <img src="assets/images/svg/logo.svg" width="135" height="55" alt="">
+        <img src="{{ '/assets/images/svg/logo.svg' | relative_url }}" width="135" height="55" alt="クロノス">
       </div>
 
       <ul class="footer-list mt30">

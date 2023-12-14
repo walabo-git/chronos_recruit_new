@@ -1,26 +1,26 @@
+// window.addEventListener('load', function(){
+//   let elem = document.querySelector(".mvSlide");
+//   if (elem !== null) { //.mvSlideがあれば…
+//     let mySwiper = new Swiper(".mvSlide", {
+//       loop: true, //ループさせる
+//       effect: "fade", //フェードのエフェクト
+//       centeredSlides: true,
+//       autoplay: {
+//         delay: 2000, //2秒後に次の画像へ
+//         disableOnInteraction: false //ユーザー操作後に自動再生を再開する
+//       },
+//       speed: 5000, //5秒かけながら次の画像へ移動
+//       allowTouchMove: false, //マウスでのスワイプを禁止
+//
+//     });
+//   }
+// });
+
+
 window.addEventListener('load', function(){
-  let elem = document.querySelector(".mvSlide");
-  if (elem !== null) { //.mvSlideがあれば…
-    let mySwiper = new Swiper(".mvSlide", {
-      loop: true, //ループさせる
-      effect: "fade", //フェードのエフェクト
-      centeredSlides: true,
-      autoplay: {
-        delay: 2000, //2秒後に次の画像へ
-        disableOnInteraction: false //ユーザー操作後に自動再生を再開する
-      },
-      speed: 5000, //5秒かけながら次の画像へ移動
-      allowTouchMove: false, //マウスでのスワイプを禁止
-
-    });
-  }
-});
-
-
-window.addEventListener('load', function(){
-  let elem2 = document.querySelector(".jobSlide");
+  let elem2 = document.querySelector(".workSlide");
   if (elem2 !== null) { //.saleSlideがあれば…
-    let saleSlide = new Swiper(".jobSlide", {
+    let saleSlide = new Swiper(".workSlide", {
       loop: true, //ループさせる
       spaceBetween: 20,
       initialSlide: 0,

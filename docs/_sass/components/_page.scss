@@ -86,9 +86,9 @@
   }
 }//.p-benefits-box
 
-/* job */
-.p-job{
-  .job-point-list{
+/* work */
+.p-work{
+  .work-point-list{
     display: grid;
     gap: 10px;
     @include mq(tb){
@@ -112,13 +112,13 @@
         min-height: 150px;
       }
     }
-    .job-point-price, .job-point-benefit{
+    .work-point-price, .work-point-benefit{
       background-color: var(--c-main);
     }
-    .job-point-note{
+    .work-point-note{
       background-color: var(--c-black);
     }
-    .job-point-price{
+    .work-point-price{
       span{
         line-height: 1;
         font-size: clamp(5rem, 8vw, 8rem);
@@ -129,8 +129,8 @@
         }
       }
     }
-  }//job-point-list
-  .job-point-wrap{
+  }//work-point-list
+  .work-point-wrap{
     margin-top: 50px;
     padding-bottom: 50px;
     display: grid;
@@ -144,12 +144,12 @@
     @include mq(pc){
       grid-template-columns: 1fr 400px;
     }
-    .job-point-head{
+    .work-point-head{
       font-size: clamp(2.6rem, 5.3vw, 4rem);
       font-weight: 600;
     }
   }
-  .job-summary{
+  .work-summary{
     display: grid;
     gap: 30px;
     @include mq(tb) {
@@ -168,7 +168,7 @@
       }
     }
   }
-}//.p-job
+}//.p-work
 
 /* thanks */
 .p-thanks{

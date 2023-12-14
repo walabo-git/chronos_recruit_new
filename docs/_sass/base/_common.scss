@@ -278,7 +278,7 @@
       grid-template-columns:repeat(3, 1fr);
     }
   }
-  &.grid-joblist{
+  &.grid-worklist{
     @include mq(tb) {
       gap: 50px 30px;
     }
@@ -445,7 +445,7 @@
 }//.entry-btn
 
 
-.card-job{
+.card-work{
   a{
     line-height: 1.4;
     transition: .3s;
@@ -490,4 +490,4 @@
       }
     }
   }
-}//.card-job
+}//.card-work
