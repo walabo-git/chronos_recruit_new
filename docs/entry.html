@@ -1,0 +1,89 @@
+---
+layout: default
+title: エントリー
+description: エントリーページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
+---
+
+  <div class="header-h"></div>
+
+  <div class="mv-page">
+    <div class="mv-thum is-anime fade">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/images/common/p-mv_pc.webp' | relative_url }}" media="(min-width: 768px)">
+        <source type="image/webp" srcset="{{ '/assets/images/common/p-mv_sp.webp' | relative_url }}" media="(max-width: 768.1px)">
+        <source srcset="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}" media="(min-width: 768px)">
+        <source srcset="{{ '/assets/images/common/p-mv_sp.jpg' | relative_url }}" media="(max-width: 768.1px)">
+        <img src="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}" alt="クロノス">
+      </picture>
+    </div>
+    <div class="mv-content">
+      <div class="mv-title container">
+        <p class="mv-en is-anime zoom">ENTRY</p>
+        <h1 class="mv-ja is-anime up">エントリー</h1>
+      </div>
+    </div>
+  </div>
+  <!-- /mv -->
+
+  <div class="container">
+  <nav class="breadcrumb">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">TOP</a></li>
+      <li>エントリー</li>
+    </ul>
+  </nav>
+</div>
+
+
+  <main class="p-entry container pb100">
+
+    <div class="container-L mt-sec is-anime up">
+
+      <div class="form">
+        <form class="" action="/form.php" method="post">
+          <div class="form-select">
+            <p class="form-head">募集職種</p>
+            <select name="options">
+              <option value="" selected disabled>職種を選択する</option>
+              <option value="option1">家電配送スタッフB（家電量販店）
+              <option value="option1">家電配送スタッフA（家電量販店）
+              <option value="option2">地場ドライバー４ｔ</option>
+              <option value="option3">地場ドライバー４ｔ</option>
+              <option value="option4">タイヤ交換作業</option>
+              <option value="option5">タイヤ販売営業</option>
+              <option value="option6">その他</option>
+            </select>
+          </div>
+
+          <div class="form-box">
+            <p class="form-head">氏名<span>※必須</span></p>
+            <input type="text" class="form-item" placeholder="山田太郎">
+          </div>
+          <div class="form-box">
+            <p class="form-head">年齢<span>※必須</span></p>
+            <input type="text" class="form-item" placeholder="22">
+          </div>
+          <div class="form-box">
+            <p class="form-head">現在のご職業必須<span>※必須</span></p>
+            <input type="text" class="form-item" placeholder="学生、営業、経理、エンジニアなど">
+          </div>
+          <div class="form-box">
+            <p class="form-head">メールアドレス<span>※必須</span></p>
+            <input type="email" class="form-item" placeholder="sample@mail.com">
+          </div>
+          <div class="form-box">
+            <p class="form-head">連絡先電話番号<span>※必須</span></p>
+            <input type="tel" class="form-item" placeholder="090-1234-5678">
+          </div>
+          <div class="form-box">
+            <p class="form-head">住所<span>※必須</span></p>
+            <input type="text" class="form-item" placeholder="愛知県⚪︎⚪︎市xx-x">
+          </div>
+          <div class="form-submit mt-sec">
+            <input type="submit" class="form-btn" value="送信">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>

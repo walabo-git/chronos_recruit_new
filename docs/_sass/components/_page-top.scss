@@ -53,8 +53,8 @@
   }
 }
 
-.job{
-  .job-list{
+.work{
+  .work-list{
     margin-top: 20px;
     width: calc(100% - 15px);
     margin-left: 15px;
@@ -68,7 +68,7 @@
       margin-left: calc(50% - #{$pcwidth} / 2);
     }
   }
-  .card-job.swiper-slide{
+  .card-work.swiper-slide{
     display: flex;
     flex-direction: column;
     width: 280px !important;
@@ -95,9 +95,9 @@
         transform: translateY(-20px);
       }
     }
-  }//.card-job.swiper-slide
+  }//.card-work.swiper-slide
 
-  .job-pagination{
+  .work-pagination{
     margin-top: 50px;
     position: relative;
     height: 70px;
@@ -131,7 +131,7 @@
     }
   }
 
-  .job-slidebtn{
+  .work-slidebtn{
     position: absolute;
     right: 0;
     top: 30px;
@@ -181,8 +181,8 @@
         width: 70px;
       }
     }
-  }//.job-slideBtn
-}//.job
+  }//.work-slideBtn
+}//.work
 
 .interview{
   @include hover;
