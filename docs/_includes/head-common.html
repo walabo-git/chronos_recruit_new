@@ -1,0 +1,30 @@
+<head prefix="og: https://ogp.me/ns#">
+  {% include analytics.html %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no, email=no, address=no" />
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}" />
+  {% if include.robots == "none" %}
+  <meta name="robots" content="none" />
+  {% endif %}
+  <!-- ogp -->
+  <meta property="og:title" content="株式会社クロノス 採用サイト" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta
+    property="og:image"
+    content="{{ '/assets/images/common/ogp.png' | relative_url }}"
+  />
+  <meta property="og:site_name" content="株式会社クロノス 採用サイト" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary" />
+  <!-- /ogp -->
+  {% if include.jsonld-path != "" %}{% include {{ include.jsonld-path }} %}{%
+  endif %}
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+</head>
