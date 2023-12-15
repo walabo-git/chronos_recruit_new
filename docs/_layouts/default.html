@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-  {% include head-common.html %}
+  {% capture jsonldPath %}{{page.jsonld-path}}{% endcapture %}{% include
+  head-common.html jsonld-path=jsonldPath %}
   <body>
     <div class="entry-btn">
       <a href="{{ '/entry' | relative_url }}"><span>エントリーする</span></a>

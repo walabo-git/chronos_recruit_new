@@ -74,6 +74,7 @@
     "hookform",
     "IFNULL",
     "JSON_OBJECTAGG",
+    "jsonld",
     "kisogawa",
     "KYUSYU",
     "Masterable",
