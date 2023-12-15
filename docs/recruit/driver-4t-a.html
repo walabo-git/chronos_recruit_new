@@ -149,52 +149,5 @@ job-id: driver-4t-a
     </div>
   </section>
   <!-- /募集要項 -->
-
-  <section class="container-L mt-sec is-anime up">
-    <h2 class="h-3">応募の流れ</h2>
-    <ol class="flow-list mt20">
-      <li class="flow-item">
-        <h2 class="h-4">1.お問い合わせ</h2>
-        <p class="f-bold mt15">まずはお問い合わせください</p>
-        <p>
-          弊社の仕事に興味を持っていただきありがとうございます。まずは電話やエントリーフォームよりお問い合わせください。
-        </p>
-        <p class="f-L f-bold mt15">TEL : 0586-75-0910 (採用担当者宛)</p>
-        <a class="btn mt20" href="{{ '/entry' | relative_url }}"
-          ><span>エントリーフォームはこちら</span></a
-        >
-      </li>
-      <li class="flow-item">
-        <h2 class="h-4">2. 面接日決定</h2>
-        <p class="f-bold mt15">
-          面接日を決定しますのでご都合をお聞かせください
-        </p>
-        <p>面接は一人当たり30分程度の個人面接を予定しております。</p>
-      </li>
-      <li class="flow-item">
-        <h2 class="h-4">3. 面接</h2>
-        <p class="f-bold mt15">履歴書をご持参ください</p>
-        <p>
-          愛知県一宮市の本社にて面接を行います。当日までに履歴書をご用意いただき、ご持参ください。
-        </p>
-      </li>
-      <li class="flow-item">
-        <h2 class="h-4">4. 採用</h2>
-        <p class="f-bold mt15">後日、結果をご連絡します</p>
-        <p>
-          面接後1週間以内にお電話にて結果をご連絡します。一緒に働けるのを楽しみにしております。
-        </p>
-      </li>
-    </ol>
-  </section>
-  <!-- /応募の流れ -->
-
-  <div class="grid grid-btn-double mt-sec is-anime up">
-    <a class="btn btn-ctr" href="{{ '/recruit' | relative_url }}"
-      ><span>募集要項</span></a
-    >
-    <a class="btn btn-ctr" href="{{ '/work' | relative_url }}"
-      ><span>職種紹介</span></a
-    >
-  </div>
+  {% include entry-flow.html %}
 </main>
