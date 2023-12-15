@@ -1,8 +1,17 @@
 ---
 ---
+@charset "UTF-8";
 
-@import "typography";
+@import "base/reset";
+@import "base/base";
+@import "base/common";
 
-.test {
-  @include blue-text;
-}
+@import "components/header";
+@import "components/footer";
+@import "components/mv";
+@import "components/page";
+@import "components/page-top";
+@import "components/post";
+@import "components/anime";
+@import "components/breadcrumb";
+@import "components/form";

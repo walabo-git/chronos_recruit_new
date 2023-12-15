@@ -1,0 +1,327 @@
+@use '../base/base' as *;
+
+/*----------
+// 投稿エリア
+-------------*/
+.post-time{
+  font-size: 1.4rem;
+}
+.post-title{
+  font-size: clamp(2.6rem, 3.6vw, 3.6rem);
+  line-height: 1.4;
+  color: var(--c-main);
+  font-weight: 600;
+  border-bottom: 2px solid var(--c-main);
+}
+.post-area{
+  min-height:calc(100vh - 650px);
+  margin-top: 30px;
+  @include mq(tb) {
+    margin-top: 40px;
+  }
+
+  h2,h3,h4{
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  h2{
+    font-size: clamp(2rem, 3vw, 3rem);
+    padding-left: 1.2em;
+    font-weight: 600;
+    position: relative;
+    &::before{
+      @include triangle;
+      border-width: 16px 16px 16px 0;
+      top: -5px;
+      @include mq(tb) {
+        border-width: 20px 20px 20px 0;
+      }
+    }
+  }
+  * + h2{
+    margin-top: 50px;
+  }
+  h3{
+    font-size: clamp(2rem, 2.2vw, 2.2rem);
+  }
+  * + h3{
+    margin-top: 40px;
+  }
+  * + h4{
+    margin-top: 30px;
+  }
+  p{
+    margin-top: .8em;
+    line-height: 2;
+  }
+  p + p{
+    margin-top: 30px;
+  }
+  h2 + p{
+    margin-top: 30px;
+  }
+  h3 + p{
+    margin-top: 30px;
+  }
+  img{
+    margin-top: 15px;
+  }
+  ul{
+    margin-top: 15px;
+    margin-left: .2em;
+    li{
+      line-height: 1.8;
+      position: relative;
+      padding-left: 1.5em;
+      &::before{
+        position: absolute;
+        display: block;
+        content: '●';
+        color: var(--c-main);
+        transform: scale(.7,.7);
+        top: 0;
+        left: 0;
+      }
+      a{
+        text-decoration: underline;
+        @include hover ;
+      }
+    }
+  }//ul
+  ol{
+    margin-top: 15px;
+    counter-reset: num;
+    > li{
+      line-height: 2;
+      position: relative;
+      padding-left: 2em;
+      &::before{
+        ;
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-size: 1.8rem;
+        width: 24px;
+        height: 24px;
+        line-height: 1.4;
+        counter-increment: num;
+        content: counter(num);
+        color: var(--c-white);
+        background-color: var(--c-main);
+        border-radius: 50%;
+        margin-right: .5em;
+        top: .15em;
+        left:0;
+      }
+      a{
+        text-decoration: underline;
+        @include hover ;
+      }
+    }//li
+  }//ol
+  a{
+    text-decoration: underline;
+    color: var(--c-main);
+    @include hover;
+    position: relative;
+    &[target*="_blank"]{
+    	position: relative;
+      padding-left: 1.6em;
+      &::before{
+      	content: "";
+      	position: absolute;
+      	top: 0;
+      	left: .6em;
+      	display: block;
+      	width: 10px;
+      	height: 8px;
+      	border: 1px solid var(--c-main);
+      }
+      &::after{
+      	content: "";
+      	position: absolute;
+      	top: .2em;
+      	left: .4em;
+      	display: block;
+      	width: 10px;
+      	height: 8px;
+    	  border: 1px solid var(--c-main);
+      }
+    }
+  }
+  table{
+    margin-top: 30px;
+    width: 100%;
+    border-top: 1px solid var(--c-border);
+    tr{
+      border-bottom: 1px solid var(--c-border);
+    }
+    th,td{
+      padding: 1em;
+      @include mq(sp) {
+        display: block;
+        width: 100%;
+        padding: 1em;
+      }
+    }
+    th{
+      font-weight: 600;
+      background: var(--c-table);
+      vertical-align: top;
+      @include mq(tb) {
+        width: 220px;
+      }
+    }
+    td{
+      background: var(--c-white);
+      @include mq(tb) {
+        padding-left: 2em;
+      }
+    }
+  }//table
+  em{
+    font-size: 1.05em;
+    font-weight: bold;
+    background-image: linear-gradient(transparent 60%, var(--c-accent) 0%)
+  }
+  strong{
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  blockquote{
+    margin-top: 15px;
+    background-color: var(--c-bg);
+    padding: 15px;
+    p{
+      margin-top: 0;
+    }
+  }
+  iframe{
+    margin-top: 15px;
+    aspect-ratio: 16 / 9;
+    max-width: 560px;
+    width: 100%;
+    display: inherit;
+    @include m-a;
+  }
+}//.post-area
+
+// 一覧
+.news-list{
+  .news-item{
+    &:not(:first-child){
+      border-top: 1px solid var(--c-main);
+      padding-top: 1.5em;
+    }
+    &:not(:last-child){
+      padding-bottom: 1.5em;
+    }
+    @include mq(tb) {
+      padding-left: 10px;
+      display: flex;
+      gap: 60px;
+    }
+    .news-time{
+      width: 8em;
+      font-size: 1.5rem;
+    }
+    .news-title{
+      flex: 1;
+      @include mq(sp) {
+        margin-top: 10px;
+      }
+      a{
+        display: block;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }//&-title
+  }//.news-item
+}//.news-list
+
+
+/*---------------
+// ページネーション
+-----------------*/
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  ;
+}
+
+.pagination span, .pagination a {
+  display: block;
+  width: auto;
+  margin: 4px;
+  padding: 8px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.pagination .pager {//ページ番号
+  width: 32px;
+}
+
+// .pagination a.prev, .pagination a.next{
+//   width: 32px;
+//   height: 32px;
+//   position: relative;
+//   &::after{
+//     // right: calc(50% - 8px);
+//     top: 50%;
+//     position: absolute;
+//     content: '';
+//     display: block;
+//     width: 8px;
+//     height: 8px;
+//     border-top: 2px solid var(--c-font);
+//     border-right: 2px solid var(--c-font);
+//   }
+// }
+
+// .pagination a.prev {//前へ
+//   &::after{
+//     right: calc(50% - 12px);
+//     // border-left: 2px solid var(--c-font);
+//     transform: translate(-50% ,-50%) rotate(-135deg);
+//   }
+// }
+//
+// .pagination a.next {//次へ
+//   &::after{
+//     right: calc(50% - 8px);
+//     // border-right: 2px solid var(--c-font);
+//     transform: translate(-50% ,-50%) rotate(45deg);
+//   }
+// }
+
+.pagination a:hover, .pagination .current {
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--c-main);
+  /* ホバー時 & 現在のページ */
+  // border-color: var(--c-main);
+  // background-color: var(--c-main);
+  // color: var(--c-white);
+  // &::after{
+  //   border-color: var(--c-white);
+  // }
+}
+
+// @media (max-width:$spwidth) {
+//   // .pagination a.prev {
+//   //   display: none;
+//   // }
+//   // .pagination a.next {
+//   //   display: none;
+//   // }
+//   .pagination a.first, .pagination a.last {
+//     font-size: 1rem;
+//   }
+// }
+
+.pagination span.page_num {//Page x / y
+  display: none;
+}

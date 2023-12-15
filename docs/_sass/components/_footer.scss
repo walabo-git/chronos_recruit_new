@@ -1,0 +1,63 @@
+@use '../base/base' as *;
+
+/*------
+footer
+---------*/
+.footer{
+  width:100%;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  border-top: 1px solid var(--c-border);
+  position: relative;
+  background-color: var(--c-white);
+  .totop{
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--c-black);
+    &::before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-top: 3px solid var(--c-white);
+      border-right: 3px solid var(--c-white);
+      transform: rotate(-45deg);
+      top: calc(50% - 4px);
+      right: calc(50% - 5px);
+    }
+  }
+
+  .footer-logo{
+    width: 175px;
+    height: auto;
+    @include m-a;
+  }
+  
+  .footer-list{
+    text-align: center;
+    .footer-list-item{
+      display: inline-block;
+      font-size: 1.2rem;
+      a{
+        text-decoration: underline;
+      }
+      + .footer-list-item{
+        margin-left: 20px;
+        @include mq(tb) {
+          margin-left: 30px;
+        }
+      }
+    }
+  }//.footer-list
+
+  .copy{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+}//.footer
