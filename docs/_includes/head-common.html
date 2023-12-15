@@ -5,6 +5,9 @@
   <meta name="format-detection" content="telephone=no, email=no, address=no" />
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}" />
+  {% if include.robots == "none" %}
+  <meta name="robots" content="none" />
+  {% endif %}
   <!-- ogp -->
   <meta property="og:title" content="株式会社クロノス 採用サイト" />
   <meta property="og:type" content="website" />

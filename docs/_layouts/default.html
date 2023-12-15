@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
-  {% capture jsonldPath %}{{page.jsonld-path}}{% endcapture %}{% include
-  head-common.html jsonld-path=jsonldPath %}
+  {% capture robots %}{{page.robots}}{% endcapture %}{% capture jsonId
+  %}{{page.job-id}}{% endcapture %}{% capture jsonldPath %}{% if page.job-id
+  %}jsonld/{{page.job-id}}.html{% endif %}{% endcapture %}{% include
+  head-common.html jsonld-path=jsonldPath robots=robots %}
   <body>
     <div class="entry-btn">
-      <a href="{{ '/entry' | relative_url }}"><span>エントリーする</span></a>
+      <a href="{{ '/entry'|  append: '?job=' | append: jsonId | relative_url }}"
+        ><span>エントリーする</span></a
+      >
     </div>
     <header class="header">
       <div class="header-inner">
@@ -139,8 +143,10 @@
       </div>
     </footer>
   </body>
-  <!-- <script src="{{ '/assets/js/main.js' | relative_url }}"></script> -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="{{ '/assets/js/swiper.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  {% if page.entry-js %}
+  <script src="{{ '/assets/js/entry.js' | relative_url }}"></script>
+  {% endif %}
 </html>
