@@ -34,8 +34,8 @@
     "**/coverage/**": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.addMissingImports": true
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit"
   },
   "cSpell.enabledLanguageIds": [
     "css",
