@@ -19,6 +19,8 @@ const selectInitializer = () => {
 
 const submitCallbackFn = async (e) => {
   e.preventDefault();
+  const submitButton = document.querySelector("form button");
+  submitButton.disabled = true; // 送信ボタンを無効にする
   const formData = new FormData(document.forms[0]);
   const body = formDataToJson(formData);
   try {
