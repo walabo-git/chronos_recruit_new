@@ -142,5 +142,7 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="{{ '/assets/js/swiper.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
-  {% if page.entry-js %}{% include entry-js.html %}{% endif %}
+  {% if page.entry-js %}
+  <script src="{{ '/assets/js/entry.js' | relative_url }}"></script>
+  {% endif %}
 </html>
