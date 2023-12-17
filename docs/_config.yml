@@ -1,0 +1,8 @@
+url: https://chronos-recruit.com/
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
