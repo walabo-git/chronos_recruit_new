@@ -1,2 +1,2 @@
 FROM jekyll/jekyll:latest
-RUN gem install webrick jekyll-livereload
+RUN gem install webrick jekyll-livereload jekyll-sitemap
