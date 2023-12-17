@@ -66,6 +66,7 @@
     "chakra",
     "chronos",
     "datetime",
+    "endcapture",
     "FAISS",
     "haml",
     "hankaku",
