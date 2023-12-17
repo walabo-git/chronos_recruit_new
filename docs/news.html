@@ -9,11 +9,28 @@ description: お知らせ一覧についてのページです。クロノスは�
 <div class="mv-page">
   <div class="mv-thum is-anime fade">
     <picture>
-      <source type="image/webp" srcset="{{ '/assets/images/common/p-mv_pc.webp' | relative_url }}" media="(min-width: 768px)">
-      <source type="image/webp" srcset="{{ '/assets/images/common/p-mv_sp.webp' | relative_url }}" media="(max-width: 768.1px)">
-      <source srcset="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}" media="(min-width: 768px)">
-      <source srcset="{{ '/assets/images/common/p-mv_sp.jpg' | relative_url }}" media="(max-width: 768.1px)">
-      <img src="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}" alt="クロノス">
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/common/p-mv_pc.webp' | relative_url }}"
+        media="(min-width: 768px)"
+      />
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/common/p-mv_sp.webp' | relative_url }}"
+        media="(max-width: 768.1px)"
+      />
+      <source
+        srcset="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="{{ '/assets/images/common/p-mv_sp.jpg' | relative_url }}"
+        media="(max-width: 768.1px)"
+      />
+      <img
+        src="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}"
+        alt="クロノス"
+      />
     </picture>
   </div>
   <div class="mv-content">
@@ -34,47 +51,30 @@ description: お知らせ一覧についてのページです。クロノスは�
   </nav>
 </div>
 
-
 <main class="p-news pb100">
-
   <article class="container mt-sec">
-
     <div class="container-L">
       <ul class="news-list mt30 is-anime up">
         <li class="news-item">
-          <div class="news-time"><time datetime="2020-07-29">2023.10.10</time></div>
-          <h2 class="news-title"><a href="{{ '/news/news-title' | relative_url }}">ポテトサラダの日</a></h2>
-        </li>
-        <li class="news-item">
-          <div class="news-time"><time datetime="2020-05-22">2025.12.22</time></div>
-          <h2 class="news-title"><a href="{{ '/news/news-title' | relative_url }}">お知らせのテキストが入りますお知らせのテキストが入ります。</a></h2>
-        </li>
-        <li class="news-item">
-          <div class="news-time"><time datetime="2020-05-22">2023.12.25</time></div>
-          <h2 class="news-title"><a href="{{ '/news/news-title' | relative_url }}">お知らせのテキストが入りますお知らせのテキストが入ります。お知らせのテキストが入りますお知らせのテキストが入ります。お知らせのテキストが入りますお知らせのテキストが入ります。</a></h2>
-        </li>
-        <li class="news-item">
-          <div class="news-time"><time datetime="2020-05-22">2025.12.22</time></div>
-          <h2 class="news-title"><a href="{{ '/news/news-title' | relative_url }}">お知らせのテキストが入りますお知らせのテキストが入ります。</a></h2>
-        </li>
-        <li class="news-item">
-          <div class="news-time"><time datetime="2020-05-22">2023.12.25</time></div>
-          <h2 class="news-title"><a href="{{ '/news/news-title' | relative_url }}">お知らせのテキストが入りますお知らせのテキストが入ります。お知らせのテキストが入りますお知らせのテキストが入ります。</a></h2>
+          <div class="news-time">
+            <time datetime="2023-12-17">2023.12.17</time>
+          </div>
+          <h2 class="news-title">
+            <a href="{{ '/news/renewal' | relative_url }}"
+              >採用サイトをリニューアルしました</a
+            >
+          </h2>
         </li>
       </ul>
 
       <div class="pagination mt100">
         <a href="#" class="prev"></a>
         <span class="current pager">1</span>
-        <a href="#" class="pager">2</a>
-        <a href="#" class="pager">3</a>
+        <!-- <a href="#" class="pager">2</a>
+        <a href="#" class="pager">3</a> -->
         <a href="#" class="next"></a>
       </div>
-
-
     </div>
     <!-- /container-L -->
-
   </article>
-
 </main>

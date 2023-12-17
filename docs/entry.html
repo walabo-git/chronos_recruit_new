@@ -56,11 +56,11 @@ entry-js: true
       <form>
         <div class="form-select">
           <p class="form-head">募集職種</p>
-          <select name="options">
+          <select name="entry-job">
             <option value="">職種を選択する</option>
             <option value="delivery-b">家電配送スタッフB（家電量販店）</option>
             <option value="delivery-a">家電配送スタッフA（家電量販店）</option>
-            <option value="driver-4t-b">地場ドライバー４ｔ(定期便)</option>
+            <option value="driver-4t-b">地場ドライバー４ｔ（定期便）</option>
             <option value="driver-4t-a">地場ドライバー４ｔ</option>
             <option value="tire-maintenance">タイヤ交換作業</option>
             <option value="tire-sales">タイヤ販売営業</option>
@@ -69,44 +69,71 @@ entry-js: true
         </div>
         <div class="form-box">
           <p class="form-head">氏名<span>※必須</span></p>
-          <input type="text" class="form-item" placeholder="山田太郎" />
+          <input
+            name="name"
+            type="text"
+            class="form-item"
+            placeholder="山田太郎"
+            required
+          />
         </div>
         <div class="form-box">
           <p class="form-head">年齢<span>※必須</span></p>
-          <input type="text" class="form-item" placeholder="22" />
+          <input
+            name="age"
+            type="text"
+            class="form-item"
+            placeholder="22"
+            required
+          />
         </div>
         <div class="form-box">
           <p class="form-head">現在のご職業必須<span>※必須</span></p>
           <input
+            name="current-job"
             type="text"
             class="form-item"
             placeholder="学生、営業、経理、エンジニアなど"
+            required
           />
         </div>
         <div class="form-box">
           <p class="form-head">メールアドレス<span>※必須</span></p>
-          <input type="email" class="form-item" placeholder="sample@mail.com" />
+          <input
+            name="email"
+            type="email"
+            class="form-item"
+            placeholder="sample@mail.com"
+            required
+          />
         </div>
         <div class="form-box">
           <p class="form-head">連絡先電話番号<span>※必須</span></p>
-          <input type="tel" class="form-item" placeholder="090-1234-5678" />
+          <input
+            name="tel"
+            type="tel"
+            class="form-item"
+            placeholder="090-1234-5678"
+            required
+          />
         </div>
         <div class="form-box">
           <p class="form-head">住所<span>※必須</span></p>
           <input
+            name="address"
             type="text"
             class="form-item"
             placeholder="愛知県⚪︎⚪︎市xx-x"
+            required
           />
         </div>
-
         <p class="mt30">
           <a class="t-link" href="https://chronos-recruit.com/privacy.html"
             >プライバシーポリシー</a
           >
         </p>
         <div class="form-submit mt-sec">
-          <input type="submit" class="form-btn" value="送信" />
+          <button class="form-btn">送信</button>
         </div>
       </form>
     </div>
