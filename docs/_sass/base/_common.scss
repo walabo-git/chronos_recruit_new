@@ -225,7 +225,7 @@
   &.btn-ctr{
     @include m-a;
   }
-  .btn-black{
+  &.btn-black{
     background-color: var(--c-black);
     &:hover{
       background-color: var(--c-main);
