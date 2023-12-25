@@ -184,6 +184,9 @@
   &-bg{
     background-color: var(--c-bg);
   }
+  &-black{
+    background-color: var(--c-block);
+  }
 }
 .bg-padding{
   padding-top: var(--header-sp);
@@ -222,7 +225,12 @@
   &.btn-ctr{
     @include m-a;
   }
-
+  .btn-black{
+    background-color: var(--c-black);
+    &:hover{
+      background-color: var(--c-main);
+    }
+  }
 }//.btn
 
 .btn-recruit{
