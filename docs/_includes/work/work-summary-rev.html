@@ -1,0 +1,21 @@
+<div class="work-summary rev mt50">
+  <div class="work-summary-thum">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/work/' | append: include.id | append: '_02.webp' | relative_url }}"
+      />
+      <source
+        srcset="{{ '/assets/images/work/' | append: include.id | append: '_02.jpg' | relative_url }}"
+      />
+      <img
+        src="{{ '/assets/images/work/' | append: include.id | append: '_02.jpg' | relative_url }}"
+        alt="{{include.summary-title}}"
+      />
+    </picture>
+  </div>
+  <div class="work-summary-content">
+    <h3 class="f-L f-bold">{{include.summary-title}}</h3>
+    <p class="mt15">{{include.summary-content}}</p>
+  </div>
+</div>

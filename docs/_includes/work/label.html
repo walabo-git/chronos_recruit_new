@@ -1,0 +1,39 @@
+<div class="bgc-bg">
+  <div class="work-point container is-anime up">
+    <ul class="work-point-list mt30-sp">
+      <li class="work-point-price">
+        <div class="price-inner">{{include.price}}</div>
+      </li>
+      {% if include.benefit %}
+      <li class="work-point-benefit">{{include.benefit}}</li>
+      {% endif %}
+      <li class="work-point-note">
+        元気に働いてくれる方なら<br />未経験でもOK
+      </li>
+    </ul>
+
+    <div class="work-point-wrap container-L">
+      <div class="work-point-content">
+        <h2 class="work-point-head t-ctr-sp">{{include.work-point-head}}</h2>
+        <p class="mt30">{{include.work-point-content}}</p>
+      </div>
+      <div class="work-point-thum">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="{{ '/assets/images/work/work-thum.webp' | relative_url }}"
+          />
+          <source
+            srcset="{{ '/assets/images/work/work-thum.jpg' | relative_url }}"
+          />
+          <img
+            src="{{ '/assets/images/work/work-thum.jpg' | relative_url }}"
+            alt="クロノス"
+          />
+        </picture>
+      </div>
+    </div>
+    <!-- /work-point-wrap -->
+  </div>
+  <!-- /container -->
+</div>

@@ -2,14 +2,18 @@
   {% include analytics.html %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no, email=no, address=no" />
-  <title>{{ page.title }}</title>
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  <title>{{ page.title }} - 株式会社クロノス</title>
   <meta name="description" content="{{ page.description }}" />
   {% if include.robots == "none" %}
   <meta name="robots" content="none" />
-  {% endif %} {% if page.url =='/' %}{% capture url %}{{site.url}}{% endcapture
-  %}{% else %}{% capture url %}{{page.url | absolute_url}}{% endcapture %}{%
-  endif %} {% assign removedHtml = url | remove: '.html' %}
+  {% endif %}
+  {% if page.url =='/' %}
+    {% assign url = site.url %}
+    {% else %}
+    {% assign url = page.url | absolute_url %}
+  {%endif %}
+  {% assign removedHtml = url | remove: '.html' %}
   <link rel="canonical" href="{{removedHtml}}" />
   <!-- ogp -->
   <meta property="og:title" content="株式会社クロノス 採用サイト" />
