@@ -1,84 +1,35 @@
 ---
-title: 倉庫内作業スタッフ募集
+title: 倉庫事業
 description: 倉庫内作業スタッフ募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
+{% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
+{% assign pageId = jobData.img_id %}
+{% assign pageTitle = page.title %}
 <div class="header-h"></div>
-<div class="container">
-  <nav class="breadcrumb">
-    <ul>
-      <li><a href="{{ '/' | relative_url }}">TOP</a></li>
-      <li>倉庫内作業</li>
-    </ul>
-  </nav>
-</div>
-{% include work/mv.html id="work02" h1="倉庫内作業"
-catch-copy="新たな挑戦、始めよう！<br />仲間と一緒に成長" %}
+{% include work/breadcrumb.html page-title=pageTitle %}
+{% include work/mv.html id=pageId h1=pageTitle catch-copy=jobData.comment %}
 <main class="p-work pb100">
-  {% include work/label.html price="時給<span>1050</span>円〜"
-  work-point-head="倉庫内スタッフ募集"
-  work-point-content="アパレル業界の物流を支える仕事に興味はありませんか？当社では、アパレル関連商品のピッキングと梱包作業スタッフを募集しています。この役割は、流行のファッションアイテムを正確に選び、丁寧に梱包し、世界中のお客様へ届ける重要な業務です。
-  業務は、商品の選出と安全な梱包に焦点を当てています。未経験の方も大歓迎！研修を通じて必要なスキルを身につけ、チームの一員として成長できる環境があります。アパレル業界での物流の核となる仕事に挑戦しましょう。"
+  {% include 
+      work/label.html
+      price="時給<span>1050</span>円〜"
+      work-point-head="倉庫内スタッフ募集"
+      work-point-content="アパレル業界の物流を支える仕事に興味はありませんか？当社では、アパレル関連商品のピッキングと梱包作業スタッフを募集しています。この役割は、流行のファッションアイテムを正確に選び、丁寧に梱包し、世界中のお客様へ届ける重要な業務です。業務は、商品の選出と安全な梱包に焦点を当てています。未経験の方も大歓迎！研修を通じて必要なスキルを身につけ、チームの一員として成長できる環境があります。アパレル業界での物流の核となる仕事に挑戦しましょう。"
   %}
-
   <section class="mt-sec container">
     <h2 class="h-2"><span>業務内容</span></h2>
-    <div class="work-summary mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work03_01.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work03_01.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work03_01.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">ピッキングとアソート作業</h3>
-        <p class="mt15">
-          アパレル業界でのキャリアを展開しませんか？現在、当社ではアパレル関連商品のピッキングとアソート作業スタッフを募集しています。この仕事では、流行のファッションアイテムを選び出し、顧客の要望に応じてアソートする重要な役割を担います。<br />
-          業務内容は、倉庫内での正確な商品のピッキングから始まります。指定されたアパレル商品を迅速かつ間違いなく選び出し、次に顧客ごとに異なるニーズに合わせたアソート作業を行います。アソート作業では、商品の組み合わせや配置に細心の注意を払い、顧客満足度の向上を図ります。<br />
-          未経験の方も歓迎です。商品の取り扱いやアソートの技術など、業務に必要な知識と技術を学ぶ研修を提供しています。私たちは、細かい作業の精度とチームワークを重視し、一人ひとりのスタッフが成長できる環境を大切にしています。
-          アパレル業界の流通を支えるピッキングとアソート作業に挑戦し、物流の重要な役割を担いましょう！
-        </p>
-      </div>
-    </div>
-    <!-- /work-summary -->
-    <div class="work-summary rev mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work03_02.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work03_02.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work03_02.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">フォークリフト作業</h3>
-        <p class="mt15">
-          アパレル業界の裏方として、重要な役割を果たしませんか？私たちは現在、アパレル関連商品の物流を支えるフォークリフト作業スタッフを募集しています。この仕事では、流行のファッションアイテムを効率的に取り扱い、倉庫内での整理整頓や輸送を担います。<br />
-          業務内容は、フォークリフトを使用した商品の搬入・搬出から始まります。大量の商品を安全かつ迅速に移動させるため、フォークリフトの操作技術と細心の注意が求められます。また、倉庫内での商品の配置や整理も重要な業務の一部です。効率的な商品管理により、スムーズな物流が実現します。<br />
-          未経験の方でも大丈夫！必要なフォークリフト操作の技術や安全管理に関する知識は、入社後の研修でしっかりと学ぶことができます。私たちはチームワークを重視し、スタッフが互いに協力しながら成長できる環境を提供しています。
-          アパレル業界でのフォークリフト作業に挑戦し、物流の効率化と品質向上に貢献しましょう！
-        </p>
-      </div>
-    </div>
-    <a class="btn btn-ctr mt-sec" href="{{ '/work' | relative_url }}"
-      ><span>職種紹介の一覧へ</span></a
-    >
+    {% include
+        work/work-summary.html
+        id=pageId
+        summary-title="ピッキングとアソート作業"
+        summary-content="アパレル業界でのキャリアを展開しませんか？現在、当社ではアパレル関連商品のピッキングとアソート作業スタッフを募集しています。この仕事では、流行のファッションアイテムを選び出し、顧客の要望に応じてアソートする重要な役割を担います。<br />業務内容は、倉庫内での正確な商品のピッキングから始まります。指定されたアパレル商品を迅速かつ間違いなく選び出し、次に顧客ごとに異なるニーズに合わせたアソート作業を行います。アソート作業では、商品の組み合わせや配置に細心の注意を払い、顧客満足度の向上を図ります。<br />未経験の方も歓迎です。商品の取り扱いやアソートの技術など、業務に必要な知識と技術を学ぶ研修を提供しています。私たちは、細かい作業の精度とチームワークを重視し、一人ひとりのスタッフが成長できる環境を大切にしています。アパレル業界の流通を支えるピッキングとアソート作業に挑戦し、物流の重要な役割を担いましょう！"
+    %}
+    {% include 
+      work/work-summary-rev.html
+      id=pageId
+      summary-title="フォークリフト作業"
+      summary-content="アパレル業界の裏方として、重要な役割を果たしませんか？私たちは現在、アパレル関連商品の物流を支えるフォークリフト作業スタッフを募集しています。この仕事では、流行のファッションアイテムを効率的に取り扱い、倉庫内での整理整頓や輸送を担います。<br />業務内容は、フォークリフトを使用した商品の搬入・搬出から始まります。大量の商品を安全かつ迅速に移動させるため、フォークリフトの操作技術と細心の注意が求められます。また、倉庫内での商品の配置や整理も重要な業務の一部です。効率的な商品管理により、スムーズな物流が実現します。<br />未経験の方でも大丈夫！必要なフォークリフト操作の技術や安全管理に関する知識は、入社後の研修でしっかりと学ぶことができます。私たちはチームワークを重視し、スタッフが互いに協力しながら成長できる環境を提供しています。アパレル業界でのフォークリフト作業に挑戦し、物流の効率化と品質向上に貢献しましょう！"
+    %}
+    {% include work/footer-button.html %}
   </section>
-  <!-- /業務内容 -->
 </main>

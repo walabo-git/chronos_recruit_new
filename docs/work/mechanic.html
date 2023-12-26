@@ -1,89 +1,35 @@
 ---
-title: 自動車整備スタッフ募集
+title: 自動車整備
 description: 自動車整備スタッフ募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
+{% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
+{% assign pageId = jobData.img_id %}
+{% assign pageTitle = page.title %}
 <div class="header-h"></div>
-
-<div class="container">
-  <nav class="breadcrumb">
-    <ul>
-      <li><a href="{{ '/' | relative_url }}">TOP</a></li>
-      <li>自動車整備スタッフ募集</li>
-    </ul>
-  </nav>
-</div>
-{% include work/mv.html id="work04" h1="自動車整備業"
-catch-copy="入社後免許取得可能！<br />未経験でも高収入のチャンス！" %}
-
+{% include work/breadcrumb.html page-title=pageTitle %}
+{% include work/mv.html id=pageId h1=pageTitle catch-copy=jobData.comment %}
 <main class="p-work pb100">
-  {% include work/label.html price="月給<span>28</span>万円〜"
-  benefit="各種社会保険完備" work-point-head="トラック整備募集"
-  work-point-content="大型トラックを含むトラックの整備、車検、修理業務のスペシャリストを目指しませんか？当社では、大型トラックを含む各種トラックの整備、車検、修理を行うスタッフを募集しています。この仕事は、車両の安全性と性能を保つため、専門的な技術力と細かな注意力が求められます。
-  業務内容は、定期的なメンテナンス、車検の対応、故障時の迅速な修理など、幅広く対応します。チームワークを重視し、一人ひとりが技術力を高められる環境があります。安全で快適な運送を支える重要な役割を担いましょう。"
+  {% include work/label.html
+      price="月給<span>28</span>万円〜"
+      benefit="各種社会保険完備"
+      work-point-head="トラック整備募集"
+      work-point-content="大型トラックを含むトラックの整備、車検、修理業務のスペシャリストを目指しませんか？当社では、大型トラックを含む各種トラックの整備、車検、修理を行うスタッフを募集しています。この仕事は、車両の安全性と性能を保つため、専門的な技術力と細かな注意力が求められます。業務内容は、定期的なメンテナンス、車検の対応、故障時の迅速な修理など、幅広く対応します。チームワークを重視し、一人ひとりが技術力を高められる環境があります。安全で快適な運送を支える重要な役割を担いましょう。"
   %}
   <section class="mt-sec container">
     <h2 class="h-2"><span>業務内容</span></h2>
-
-    <div class="work-summary mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work04_01.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work04_01.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work04_01.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">クロノスグループ内の車両の整備</h3>
-        <p class="mt15">
-          クロノスグループにおけるトラック整備のスペシャリストを目指しませんか？当社では現在、グループ内で使用されるトラックの整備業務を担うスタッフを募集しています。<br />
-          この職種では、トラックの性能と安全性を維持し、効率的な物流サポートを提供するための専門知識と技術が求められます。
-          業務内容は、大型トラックや特殊車両など、様々なタイプのトラックの定期的な点検とメンテナンス、故障時の迅速な修理が含まれます。また、トラックの最新技術や安全基準に関する知識を常に更新し、各車両が最適な状態で運行できるようにすることも重要です。<br />
-          未経験者でも大歓迎です。トラック整備の基礎から応用まで学べる研修制度が整っており、実務を通じて専門的なスキルを身につけることができます。私たちはチームワークを重視し、スタッフ一人ひとりが成長し、活躍できる環境を提供します。
-          クロノスグループ内でのトラック整備に携わり、効率的かつ安全な物流の実現に貢献しましょう！
-        </p>
-      </div>
-    </div>
-    <!-- /work-summary -->
-    <div class="work-summary rev mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work04_02.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work04_02.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work04_02.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">クロノスグループ内の乗用車整備</h3>
-        <p class="mt15">
-          クロノスグループにおける乗用車整備のキャリアを積みませんか？当社では、グループ内で使用される乗用車の整備を担うスタッフを募集しています。この役割は、乗用車のメンテナンスと性能維持を通じて、グループの日常運営を支える重要な業務です。<br />
-          業務内容は、乗用車の定期点検、メンテナンス、必要に応じた修理などを含みます。これには、エンジンや電気系統のチェック、安全装置の機能確認、外装の状態管理などが含まれます。車両ごとの特性に合わせた最適な整備計画の策定も求められます。<br />
-          未経験者も歓迎です。入社後には、乗用車整備の基本から高度な技術に至るまで幅広く学べる研修プログラムがあり、専門的な知識と技術を身につけることができます。チームワークを重視し、一人ひとりが成長し、活躍できる環境を提供しています。
-          クロノスグループ内の乗用車整備で、高品質な車両管理を実現し、グループの円滑な運営に貢献しましょう！
-        </p>
-      </div>
-    </div>
-    <!-- /work-summary -->
-
-    <a class="btn btn-ctr mt-sec" href="{{ '/work' | relative_url }}"
-      ><span>職種紹介の一覧へ</span></a
-    >
+    {% include
+        work/work-summary.html
+        id=pageId
+        summary-title="クロノスグループ内の車両の整備"
+        summary-content="クロノスグループにおけるトラック整備のスペシャリストを目指しませんか？当社では現在、グループ内で使用されるトラックの整備業務を担うスタッフを募集しています。<br />この職種では、トラックの性能と安全性を維持し、効率的な物流サポートを提供するための専門知識と技術が求められます。業務内容は、大型トラックや特殊車両など、様々なタイプのトラックの定期的な点検とメンテナンス、故障時の迅速な修理が含まれます。また、トラックの最新技術や安全基準に関する知識を常に更新し、各車両が最適な状態で運行できるようにすることも重要です。<br />未経験者でも大歓迎です。トラック整備の基礎から応用まで学べる研修制度が整っており、実務を通じて専門的なスキルを身につけることができます。私たちはチームワークを重視し、スタッフ一人ひとりが成長し、活躍できる環境を提供します。クロノスグループ内でのトラック整備に携わり、効率的かつ安全な物流の実現に貢献しましょう！"
+    %}
+    {% include 
+      work/work-summary-rev.html
+      id=pageId
+      summary-title="クロノスグループ内の乗用車整備"
+      summary-content="クロノスグループにおける乗用車整備のキャリアを積みませんか？当社では、グループ内で使用される乗用車の整備を担うスタッフを募集しています。この役割は、乗用車のメンテナンスと性能維持を通じて、グループの日常運営を支える重要な業務です。<br />業務内容は、乗用車の定期点検、メンテナンス、必要に応じた修理などを含みます。これには、エンジンや電気系統のチェック、安全装置の機能確認、外装の状態管理などが含まれます。車両ごとの特性に合わせた最適な整備計画の策定も求められます。<br />未経験者も歓迎です。入社後には、乗用車整備の基本から高度な技術に至るまで幅広く学べる研修プログラムがあり、専門的な知識と技術を身につけることができます。チームワークを重視し、一人ひとりが成長し、活躍できる環境を提供しています。クロノスグループ内の乗用車整備で、高品質な車両管理を実現し、グループの円滑な運営に貢献しましょう！"
+    %}
+    {% include work/footer-button.html %}
   </section>
-  <!-- /業務内容 -->
 </main>

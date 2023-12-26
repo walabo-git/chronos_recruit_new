@@ -1,0 +1,41 @@
+- title: 2tトラック
+  employment_type: 正社員
+  comment: 新しい冒険を始めよう<br />経験不問、活気あるチームでの成長を！
+  img_id: work01
+  path: driver01
+
+- title: 4tトラック
+  employment_type: 正社員
+  comment: 大きな可能性を運ぶ<br />やる気次第でどこまでも！
+  img_id: work02
+  path: driver02
+
+- title: 10tトラック
+  employment_type: 正社員
+  comment: 大型トラックで大きな夢を<br />初心者歓迎、一緒に学びましょう！
+  img_id: work03
+  path: driver03
+
+- title: 自動車整備
+  employment_type: 正社員
+  comment: 車のプロを目指す<br />技術と情熱があれば未経験でも大歓迎！
+  img_id: work04
+  path: mechanic
+
+- title: 倉庫事業
+  employment_type: パート・アルバイト
+  comment: 柔軟な働き方で新たなキャリアを<br />未経験者でも安心のサポート！
+  img_id: work05
+  path: warehouse
+
+- title: PIRELLIタイヤの販売・取付
+  employment_type: 正社員
+  comment: 世界的ブランドでキャリアアップ<br />元気と熱意があればOK！
+  img_id: work06
+  path: pirelli-tire-sales
+
+- title: 中古トラック販売
+  employment_type: 正社員
+  comment: 多様な経験を通じてスキルアップ<br />やる気があれば経験は不問！
+  img_id: work07
+  path: used-trucks

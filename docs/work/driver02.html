@@ -1,83 +1,36 @@
 ---
-title: 10ｔトラックドライバー募集
-description: 10ｔトラックドライバー募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
+title: 4tトラック
+description: 4tトラックドライバー募集ページです。株式会社クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
+{% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
+{% assign pageId = jobData.img_id %}
+{% assign pageTitle = page.title %}
 <div class="header-h"></div>
-<div class="container">
-  <nav class="breadcrumb">
-    <ul>
-      <li><a href="{{ '/' | relative_url }}">TOP</a></li>
-      <li>10ｔトラック事業</li>
-    </ul>
-  </nav>
-</div>
-{% include work/mv.html id="work02" h1="10ｔトラック事業"
-catch-copy="入社後免許取得可能！<br />未経験でも高収入のチャンス！" %}
+{% include work/breadcrumb.html page-title=pageTitle %}
+{% include work/mv.html id=pageId h1=pageTitle catch-copy=jobData.comment %}
 <main class="p-work pb100">
-  {% include work/label.html price="月給<span>35</span>万円〜"
-  benefit="各種社会保険完備" work-point-head="配送スタッフ募集"
-  work-point-content="運送業界でのキャリアを築きませんか？私たちは10t車両を使用した一般雑貨と食品の輸送スタッフを募集しています。大型車両での輸送業務を担い、荷物の積み込みから効率的な運搬、荷降ろしまでを行います。特に食品輸送では温度管理や衛生面に注意が必要です。未経験者も歓迎し、研修で必要なスキルを身につけられます。チームワークを重視し、スタッフの成長をサポートします。"
+  {% include
+      work/label.html
+      price="月給<span>28</span>万円〜"
+      benefit="各種社会保険完備"
+      work-point-head="配送スタッフ募集"
+      work-point-content="運送業界でのキャリアを広げませんか？当社では4t車両を使用し、多様な貨物の輸送スタッフを募集しています。未経験者も歓迎で、入社後に必要な技術や知識を学べます。日用品から専門機材まで、幅広い商品の輸送や荷物の積み下ろし、ルート計画などを経験できます。チームワークを重視し、各スタッフの成長をサポートする環境で、運送のプロフェッショナルとしてスキルアップしましょう！"
   %}
-
   <section class="mt-sec container">
     <h2 class="h-2"><span>業務内容</span></h2>
-    <div class="work-summary mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work03_01.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work03_01.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work03_01.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">１０ｔ車両での一般雑貨の近郊の配達</h3>
-        <p class="mt15">
-          運送業界での大きな挑戦を始めてみませんか？当社では現在、10t車両を用いた一般雑貨の近郊配達スタッフを積極的に募集しています。この仕事では、日常生活に不可欠なさまざまな雑貨を、近郊地域のお客様のもとへ安全かつ迅速に届ける重要な役割を担います。<br />
-          10t車両での配達は、その規模と範囲の広さが特徴です。日用品から特殊なアイテムまで、多岐にわたる商品を運ぶことになります。業務内容は、商品の適切な積み込みから始まり、効率的なルートでの配達、そして丁寧な荷下ろしとお客様への直接手渡しが含まれます。<br />
-          未経験の方も心配はいりません。10t車両の操作技術や安全な運転方法、荷物の取り扱い方など、基本から学べる研修制度を完備しています。チームワークを重視し、一人ひとりの成長を大切にする職場環境です。
-          私たちと一緒に、10t車両を駆使した近郊配達業務に挑戦し、運送業界での新たなキャリアを築きましょう！
-        </p>
-      </div>
-    </div>
-    <!-- /work-summary -->
-    <div class="work-summary rev mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work03_02.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work03_02.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work03_02.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">１０ｔ車両での食品配達業務</h3>
-        <p class="mt15">
-          運送業界での食品配達に特化したキャリアを展開しませんか？現在、当社では10t車両を使用した食品配達業務のスタッフを募集しています。この仕事は、新鮮な食品をお客様のもとへ届ける責任ある役割を担い、社会に不可欠なサービスを提供することになります。<br />
-          この職種の特長は、大型車両を駆使した食品の輸送にあります。業務内容は、品質を保つための適切な温度管理から始まり、商品の丁寧な積み込み、計画的なルートでの効率的な配達、そしてお客様のもとでの細心の注意を払った荷下ろしが含まれます。<br />
-          食品配達では、衛生管理や安全な取り扱いに対する深い理解が必要です。未経験の方も、専門的な知識と技術を身につけるための研修制度が整っています。私たちはチームワークを重視し、スタッフ一人ひとりの成長をサポートします。
-          一緒に10t車両での食品配達業務に挑戦し、運送業界での新たな道を歩みましょう！
-        </p>
-      </div>
-    </div>
-    <a class="btn btn-ctr mt-sec" href="{{ '/work' | relative_url }}"
-      ><span>職種紹介の一覧へ</span></a
-    >
+    {% include
+        work/work-summary.html
+        id=pageId
+        summary-title="4t車両での一般雑貨の近郊の配達"
+        summary-content="運送業界でのキャリアアップを目指しませんか？当社では4t車両を使用し、一般雑貨の近郊配達を行うスタッフを募集しています。<br />この職種では、日常生活に欠かせない様々な雑貨を、地域のお客様のもとへ届ける大切な役割を担います。この仕事の魅力は、地域コミュニティへの貢献です。日用品から食料品、時には特別な商品まで、多種多様な品々を安全かつ迅速に配達します。未経験の方も大歓迎！運送業界の基本から学べる研修制度があり、4tトラックの運転技術や安全な荷物の扱い方を身につけることができます。<br />業務内容は、荷物の積み込み、効率的なルートでの配達、丁寧な荷下ろしとお客様への手渡しが含まれます。地域に根差したサービスを提供する中で、お客様とのコミュニケーションも大切な要素です。私たちはチームワークを大切にし、一人ひとりが成長できる環境を提供しています。地域社会に密着した運送業務を通じて、運送のプロフェッショナルとしてスキルを磨きましょう！"
+    %}
+    {% include
+        work/work-summary-rev.html
+        id=pageId
+        summary-title="4tでの一般雑貨の中距離の配達"
+        summary-content="運送業界での新たな挑戦を始めてみませんか？私たちのチームでは現在、4t車両を用いた一般雑貨の中距離配達スタッフを募集しています。<br />この仕事では、日常生活に必要な様々な雑貨を、中距離エリアのお客様に届ける重要な役割を果たします。この職種の醍醐味は、広範囲にわたる地域にサービスを提供することです。生活必需品から特別なアイテムまで、さまざまな商品を安全かつ確実に配達します。運送業界未経験の方でも心配はいりません。4t車両の運転技術や荷物の安全な取り扱い方法など、基本から学べる研修制度を整えています。<br />業務内容は、商品の積み込み、効率的なルートでの配達、丁寧な荷下ろしと顧客への配送が含まれます。また、中距離配達では、様々な地域の顧客と接する機会もあり、それぞれの地域の特性を理解し、それに合ったサービスを提供することが求められます。私たちはチームワークを重視し、一人ひとりが自身のスキルを磨きながら成長できる環境を提供しています。広範囲にわたる地域への運送業務を通じて、運送のプロフェッショナルとしてキャリアを築きましょう！"
+    %}
+    {% include work/footer-button.html %}
   </section>
-  <!-- /業務内容 -->
 </main>

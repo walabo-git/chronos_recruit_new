@@ -1,88 +1,38 @@
 ---
-title: 4ｔトラックドライバー募集
-description: 4ｔトラックドライバー募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
+title: 2tトラック
+description: 2tトラックドライバー募集ページです。株式会社クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
+{% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
+{% assign pageId = jobData.img_id %}
+{% assign pageTitle = page.title %}
 <div class="header-h"></div>
-<div class="container">
-  <nav class="breadcrumb">
-    <ul>
-      <li><a href="{{ '/' | relative_url }}">TOP</a></li>
-      <li>4ｔトラック事業</li>
-    </ul>
-  </nav>
-</div>
-
-{% include work/mv.html id="work02" h1="4ｔトラック事業"
-catch-copy="入社後免許取得可能！<br />未経験でも高収入のチャンス！" %}
-<!-- /mv-work -->
-
+{% include work/breadcrumb.html page-title=pageTitle %}
+{% include work/mv.html id=pageId h1=pageTitle catch-copy=jobData.comment %}
 <main class="p-work pb100">
-  {% include work/label.html price="月給<span>28</span>万円〜"
-  benefit="各種社会保険完備" work-point-head="配送スタッフ募集"
-  work-point-content="運送業界でのキャリアを広げませんか？当社では4t車両を使用し、多様な貨物の輸送スタッフを募集しています。未経験者も歓迎で、入社後に必要な技術や知識を学べます。日用品から専門機材まで、幅広い商品の輸送や荷物の積み下ろし、ルート計画などを経験できます。チームワークを重視し、各スタッフの成長をサポートする環境で、運送のプロフェッショナルとしてスキルアップしましょう！"
+  {% include 
+    work/label.html 
+    price="月給<span>28</span>万円〜"
+    benefit="各種社会保険完備"
+    work-point-head="配送スタッフ募集"
+    work-point-content="運送業界での新たなキャリアを始めませんか？当社では2tトラック事業の配送スタッフを募集しています。未経験の方でも大歓迎！入社後に免許の取得が可能ですので、経験がなくても安心してスタートできます。しっかりとした評価制度で高収入のチャンスもあります。各種社会保険も完備しており、安定した生活を送ることができます。私たちは活気に満ちた環境で、元気に働くスタッフを求めています。未経験からプロへと成長できるチャンスを掴み、運送業界での新しい道を歩みましょう！"
   %}
-  <section class="mt-sec container">
+  <section class="mt-sec container is-anime up">
     <h2 class="h-2"><span>業務内容</span></h2>
-    <div class="work-summary mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work02_01.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work02_01.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work02_01.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">４ｔ車両での一般雑貨の近郊の配達</h3>
-        <p class="mt15">
-          運送業界でのキャリアアップを目指しませんか？当社では4t車両を使用し、一般雑貨の近郊配達を行うスタッフを募集しています。<br />この職種では、日常生活に欠かせない様々な雑貨を、地域のお客様のもとへ届ける大切な役割を担います。
-          この仕事の魅力は、地域コミュニティへの貢献です。日用品から食料品、時には特別な商品まで、多種多様な品々を安全かつ迅速に配達します。未経験の方も大歓迎！運送業界の基本から学べる研修制度があり、4tトラックの運転技術や安全な荷物の扱い方を身につけることができます。<br />
-          業務内容は、荷物の積み込み、効率的なルートでの配達、丁寧な荷下ろしとお客様への手渡しが含まれます。地域に根差したサービスを提供する中で、お客様とのコミュニケーションも大切な要素です。
-          私たちはチームワークを大切にし、一人ひとりが成長できる環境を提供しています。地域社会に密着した運送業務を通じて、運送のプロフェッショナルとしてスキルを磨きましょう！
-        </p>
-      </div>
-    </div>
-    <!-- /work-summary -->
-    <div class="work-summary rev mt50">
-      <div class="work-summary-thum">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="{{ '/assets/images/work/work02_02.webp' | relative_url }}"
-          />
-          <source
-            srcset="{{ '/assets/images/work/work02_02.jpg' | relative_url }}"
-          />
-          <img
-            src="{{ '/assets/images/work/work02_02.jpg' | relative_url }}"
-            alt="クロノス"
-          />
-        </picture>
-      </div>
-      <div class="work-summary-content">
-        <h3 class="f-L f-bold">４ｔでの一般雑貨の中距離の配達</h3>
-        <p class="mt15">
-          運送業界での新たな挑戦を始めてみませんか？私たちのチームでは現在、4t車両を用いた一般雑貨の中距離配達スタッフを募集しています。<br />
-          この仕事では、日常生活に必要な様々な雑貨を、中距離エリアのお客様に届ける重要な役割を果たします。
-          この職種の醍醐味は、広範囲にわたる地域にサービスを提供することです。生活必需品から特別なアイテムまで、さまざまな商品を安全かつ確実に配達します。運送業界未経験の方でも心配はいりません。4t車両の運転技術や荷物の安全な取り扱い方法など、基本から学べる研修制度を整えています。<br />
-          業務内容は、商品の積み込み、効率的なルートでの配達、丁寧な荷下ろしと顧客への配送が含まれます。また、中距離配達では、様々な地域の顧客と接する機会もあり、それぞれの地域の特性を理解し、それに合ったサービスを提供することが求められます。
-          私たちはチームワークを重視し、一人ひとりが自身のスキルを磨きながら成長できる環境を提供しています。広範囲にわたる地域への運送業務を通じて、運送のプロフェッショナルとしてキャリアを築きましょう！
-        </p>
-      </div>
-    </div>
-    <!-- /work-summary -->
-
-    <a class="btn btn-ctr mt-sec" href="{{ '/work' | relative_url }}"
-      ><span>職種紹介の一覧へ</span></a
-    >
+    {% include
+      work/work-summary.html
+      id=pageId
+      summary-title="家電配送・家具配送"
+      summary-content="運送業界での新たなキャリアを築くチャンス！当社では活気あるチームで、家電や家具の配送スタッフを募集しています。この仕事では、2tトラックを使用して、お客様のもとへ大切な家電や家具を届ける重要な役割を担います。<br />未経験の方も大歓迎！入社後には、必要な免許取得のためのサポートがあり、運転経験がない方でも安心してスタートできます。各種社会保険も完備しており、安定した環境の中で働くことが可能です。<br />私たちのチームは元気とやる気に溢れており、同じ目標に向かって協力し合います。家電や家具の配送という責任感のある仕事を通じて、お客様の生活に直接貢献することができます。日々の業務は、商品の積み込み、安全な運搬、丁寧な配達と設置など、多岐にわたります。<br />未経験から始めて、運送業界のプロフェッショナルへと成長する道がここにあります。運送業界での新しい一歩を、私たちと共に踏み出しましょう！"
+    %}
+    {% include 
+      work/work-summary-rev.html
+      id=pageId
+      summary-title="引っ越しから家具移動サービス"
+      summary-content="運送業界での新しい挑戦を始めませんか？当社では、引っ越しサービスと家具の移動サービスを担うスタッフを募集しています。この仕事では、家庭やオフィスの大切な荷物を丁寧に移動させる責任ある役割を果たします。<br />未経験の方も心配無用！入社後には、運送業界に必要な技術や知識を学ぶ機会があります。チームワークを大切にし、安心して業務に取り組むことができる環境を提供します。また、各種社会保険の完備もあり、安定した働き方が可能です。<br />業務内容は、お客様の引っ越しをサポートすることから始まります。家具や家電製品の梱包、運搬、新居での設置まで、一連の流れを丁寧に行います。また、家具の移動サービスでは、お客様のニーズに合わせて家具を安全に移動させる技術が求められます。<br />未経験からスタートし、引っ越しと家具移動のプロフェッショナルへと成長するチャンスがあります。お客様の新しい生活のスタートを支えるやりがいのある仕事を一緒に始めましょう！"
+    %}
+    {% include work/footer-button.html %}
   </section>
-  <!-- /業務内容 -->
+
+
 </main>

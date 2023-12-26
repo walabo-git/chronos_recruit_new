@@ -4,7 +4,6 @@ description: 職種紹介ページ。クロノスは常にワクワクする気�
 ---
 
 <div class="header-h"></div>
-
 <div class="mv-page">
   <div class="mv-thum is-anime fade">
     <picture>
@@ -53,203 +52,35 @@ description: 職種紹介ページ。クロノスは常にワクワクする気�
 <main class="p-work pb100 mt-sec">
   <article class="container">
     <ul class="grid x3 grid-worklist is-anime up">
+      {% for job in site.data.chronos_jobs %}
       <li class="card-work">
-        <a href="{{ '/work/delivery'| relative_url }}">
+        <a href="{{ '/work/'| append: job.path | relative_url }}">
           <div class="card-thum">
             <div class="thum-img">
               <picture>
                 <source
                   type="image/webp"
-                  srcset="{{ '/assets/images/work/work01-thum.webp' | relative_url }}"
+                  srcset="{{ '/assets/images/work/' | append: job.img_id | append: '-thum.webp' | relative_url }}"
                 />
                 <source
-                  srcset="{{ '/assets/images/work/work01-thum.jpg' | relative_url }}"
+                  srcset="{{ '/assets/images/work/' | append: job.img_id | append: '-thum.jpg' | relative_url }}"
                 />
                 <img
-                  src="{{ '/assets/images/work/work01-thum.jpg' | relative_url }}"
-                  alt="クロノス"
+                  src="{{ '/assets/images/work/' | append: job.img_id | append: '-thum.jpg' | relative_url }}"
+                  alt="{{job.title}}"
                 />
               </picture>
             </div>
           </div>
           <div class="card-content">
             <div class="card-title">
-              <h3>配送スタッフ 一宮市<br />正社員</h3>
+              <h3>{{job.title}}<br />{{job.employment_type}}</h3>
             </div>
-            <p class="f-S">
-              入社後免許取得可能！<br />未経験でも高収入のチャンス！
-            </p>
+            <p class="f-S">{{job.comment}}</p>
           </div>
         </a>
       </li>
-      <!-- /card-work -->
-      <li class="card-work">
-        <a href="{{ '/work/driver01'| relative_url }}">
-          <div class="card-thum">
-            <div class="thum-img">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="{{ '/assets/images/work/work02-thum.webp' | relative_url }}"
-                />
-                <source
-                  srcset="{{ '/assets/images/work/work02-thum.jpg' | relative_url }}"
-                />
-                <img
-                  src="{{ '/assets/images/work/work02-thum.jpg' | relative_url }}"
-                  alt="クロノス"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">
-              <h3>ドライバー 一宮市<br />正社員</h3>
-            </div>
-            <p class="f-S">資格を使ってしっかり<br />稼いでみませんか？</p>
-          </div>
-        </a>
-      </li>
-      <!-- /card-work -->
-      <li class="card-work">
-        <a href="{{ '/work/driver02'| relative_url }}">
-          <div class="card-thum">
-            <div class="thum-img">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="{{ '/assets/images/work/work03-thum.webp' | relative_url }}"
-                />
-                <source
-                  srcset="{{ '/assets/images/work/work03-thum.jpg' | relative_url }}"
-                />
-                <img
-                  src="{{ '/assets/images/work/work03-thum.jpg' | relative_url }}"
-                  alt="クロノス"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">
-              <h3>ドライバー 春日井市<br />正社員</h3>
-            </div>
-            <p class="f-S">元気に仕事に取り組むことが<br />できる方募集！</p>
-          </div>
-        </a>
-      </li>
-      <li class="card-work">
-        <a href="{{ '/work/warehouse'| relative_url }}">
-          <div class="card-thum">
-            <div class="thum-img">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="{{ '/assets/images/work/work03-thum.webp' | relative_url }}"
-                />
-                <source
-                  srcset="{{ '/assets/images/work/work03-thum.jpg' | relative_url }}"
-                />
-                <img
-                  src="{{ '/assets/images/work/work03-thum.jpg' | relative_url }}"
-                  alt="クロノス"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">
-              <h3>倉庫内作業<br />パート・アルバイト</h3>
-            </div>
-            <p class="f-S">元気に仕事に取り組むことが<br />できる方募集！</p>
-          </div>
-        </a>
-      </li>
-      <!-- /card-work -->
-      <li class="card-work">
-        <a href="{{ '/work/mechanic'| relative_url }}">
-          <div class="card-thum">
-            <div class="thum-img">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="{{ '/assets/images/work/work04-thum.webp' | relative_url }}"
-                />
-                <source
-                  srcset="{{ '/assets/images/work/work04-thum.jpg' | relative_url }}"
-                />
-                <img
-                  src="{{ '/assets/images/work/work04-thum.jpg' | relative_url }}"
-                  alt="クロノス"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">
-              <h3>トラック整備 小牧市<br />正社員</h3>
-            </div>
-            <p class="f-S">メリハリのある職場で<br />プライベートも充実</p>
-          </div>
-        </a>
-      </li>
-      <!-- /card-work -->
-      <li class="card-work">
-        <a href="{{ '/work/pirelli-tire-sales'| relative_url }}">
-          <div class="card-thum">
-            <div class="thum-img">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="{{ '/assets/images/work/work05-thum.webp' | relative_url }}"
-                />
-                <source
-                  srcset="{{ '/assets/images/work/work05-thum.jpg' | relative_url }}"
-                />
-                <img
-                  src="{{ '/assets/images/work/work05-thum.jpg' | relative_url }}"
-                  alt="クロノス"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">
-              <h3>PIRELLI タイヤ販売・取付<br />正社員</h3>
-            </div>
-            <p class="f-S">元気に仕事に取り組むことが<br />できる方募集！</p>
-          </div>
-        </a>
-      </li>
-      <!-- /card-work -->
-      <li class="card-work">
-        <a href="{{ '/work/used-trucks'| relative_url }}">
-          <div class="card-thum">
-            <div class="thum-img">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="{{ '/assets/images/work/work06-thum.webp' | relative_url }}"
-                />
-                <source
-                  srcset="{{ '/assets/images/work/work06-thum.jpg' | relative_url }}"
-                />
-                <img
-                  src="{{ '/assets/images/work/work06-thum.jpg' | relative_url }}"
-                  alt="クロノス"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">
-              <h3>トラック整備 小牧市<br />アルバイト</h3>
-            </div>
-            <p class="f-S">メリハリのある職場で<br />プライベートも充実</p>
-          </div>
-        </a>
-      </li>
-      <!-- /card-work -->
+      {% endfor %}
     </ul>
     <!-- /grid x3 grid-work -->
   </article>

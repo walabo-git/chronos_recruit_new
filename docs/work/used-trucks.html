@@ -1,31 +1,30 @@
 ---
 title: 中古トラック販売
 description: 中古トラック販売スタッフ募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
-page-id: work04
 ---
 
-{% capture pageTitle %}{{page.title}}{% endcapture %}{% capture pageId
-%}{{page.page-id}}{% endcapture %}
+{% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
+{% assign pageId = jobData.img_id %}
+{% assign pageTitle = page.title %}
 <div class="header-h"></div>
-{% include work/breadcrumb.html page-title=pageTitle %}{% include work/mv.html
-id=pageId h1=pageTitle catch-copy="入社後免許取得可能！<br />未経験でも高収入のチャンス！"
-%}
+{% include work/breadcrumb.html page-title=pageTitle %}
+{% include work/mv.html id=pageId h1=pageTitle catch-copy=jobData.comment %}
 <main class="p-work pb100">
-  {% include work/label.html price="月給<span>23</span>万円〜"
-  benefit="各種社会保険完備" work-point-head="トラック販売営業"
-  work-point-content="中古トラック販売に携わる営業スタッフとして、未経験からでもキャリアアップのチャンスがあります。当社では、中古トラックの販売を担当し、顧客のニーズに応じた最適な車両の提案を行います。元気で積極的な方を歓迎し、免許取得のサポートもあります。各種社会保険が完備されており、安定した職場で専門的な知識とスキルを身につけ、トラック業界での販売のプロフェッショナルを目指しましょう。"
+  {% include
+      work/label.html
+      price="月給<span>23</span>万円〜"
+      benefit="各種社会保険完備"
+      work-point-head="トラック販売営業"
+      work-point-content="中古トラック販売に携わる営業スタッフとして、未経験からでもキャリアアップのチャンスがあります。当社では、中古トラックの販売を担当し、顧客のニーズに応じた最適な車両の提案を行います。元気で積極的な方を歓迎し、免許取得のサポートもあります。各種社会保険が完備されており、安定した職場で専門的な知識とスキルを身につけ、トラック業界での販売のプロフェッショナルを目指しましょう。"
   %}
   <section class="mt-sec container">
     <h2 class="h-2"><span>業務内容</span></h2>
-    {% include work/work-summary.html id=pageId summary-title="トラック写真撮影"
-    summary-content="
-    中古トラック販売に欠かせない写真と動画撮影のスタッフとして、あなたのクリエイティビティを発揮しませんか？<br />当社では、中古トラックの魅力を最大限に伝えるための高品質なビジュアルコンテンツ制作を担うスタッフを募集しています。この職種では、トラックの状態を正確に、かつ魅力的に映し出す写真撮影と、トラックの機能や特徴を詳細に説明する動画制作が主な業務です。
-    業務内容は、トラックの外観や内装の撮影、動作の確認を行う動画の撮影、編集が含まれます。撮影する際には、車両の状態や特長を際立たせるアングルや照明の工夫が求められます。また、動画では、トラックの操作方法や特徴をわかりやすく伝えるためのナレーションやテキストの追加も重要です。
-    未経験の方も歓迎します。<br />私たちはチームワークを重視し、一人ひとりが自身の技術を磨きながら成長できる環境を提供しています。
-    中古トラックの魅力を最大限に伝えるビジュアルコンテンツ制作に携わり、販売促進に貢献しましょう！"
+    {% include
+        work/work-summary.html
+        id=pageId
+        summary-title="トラック写真撮影"
+        summary-content="中古トラック販売に欠かせない写真と動画撮影のスタッフとして、あなたのクリエイティビティを発揮しませんか？<br />当社では、中古トラックの魅力を最大限に伝えるための高品質なビジュアルコンテンツ制作を担うスタッフを募集しています。この職種では、トラックの状態を正確に、かつ魅力的に映し出す写真撮影と、トラックの機能や特徴を詳細に説明する動画制作が主な業務です。業務内容は、トラックの外観や内装の撮影、動作の確認を行う動画の撮影、編集が含まれます。撮影する際には、車両の状態や特長を際立たせるアングルや照明の工夫が求められます。また、動画では、トラックの操作方法や特徴をわかりやすく伝えるためのナレーションやテキストの追加も重要です。未経験の方も歓迎します。<br />私たちはチームワークを重視し、一人ひとりが自身の技術を磨きながら成長できる環境を提供しています。中古トラックの魅力を最大限に伝えるビジュアルコンテンツ制作に携わり、販売促進に貢献しましょう！"
     %}
-    <a class="btn btn-ctr mt-sec" href="{{ '/work' | relative_url }}"
-      ><span>職種紹介の一覧へ</span></a
-    >
+    {% include work/footer-button.html %}
   </section>
 </main>

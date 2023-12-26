@@ -21,6 +21,13 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[liquid]": {
+    "editor.defaultFormatter": "sissel.shopify-liquid",
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.html": "liquid"
+  },
   "files.watcherExclude": {
     "**/vendor/*/**": true,
     "**/.git/objects/**": true,
