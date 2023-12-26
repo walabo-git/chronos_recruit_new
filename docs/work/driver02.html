@@ -1,102 +1,27 @@
 ---
-title: ドライバー(正社員)募集
-description: ドライバー(正社員)募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
+title: 10ｔトラックドライバー募集
+description: 10ｔトラックドライバー募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
 <div class="header-h"></div>
-
 <div class="container">
   <nav class="breadcrumb">
     <ul>
       <li><a href="{{ '/' | relative_url }}">TOP</a></li>
-      <li>ドライバー(正社員)募集</li>
+      <li>10ｔトラック事業</li>
     </ul>
   </nav>
 </div>
-
-<div class="mv-page mv-work mt20">
-  <div class="mv-thum is-anime fade">
-    <picture>
-      <source
-        type="image/webp"
-        srcset="{{ '/assets/images/work/work03-mv_pc.webp' | relative_url }}"
-        media="(min-width: 768px)"
-      />
-      <source
-        type="image/webp"
-        srcset="{{ '/assets/images/work/work03-mv_sp.webp' | relative_url }}"
-        media="(max-width: 768.1px)"
-      />
-      <source
-        srcset="{{ '/assets/images/work/work03-mv_pc.jpg' | relative_url }}"
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="{{ '/assets/images/work/work03-mv_sp.jpg' | relative_url }}"
-        media="(max-width: 768.1px)"
-      />
-      <img
-        src="{{ '/assets/images/work/work03-mv_pc.jpg' | relative_url }}"
-        alt="クロノス"
-      />
-    </picture>
-  </div>
-  <div class="mv-work-content">
-    <div class="mv-work-wrap">
-      <h1 class="mv-work-title is-anime left">ドライバー(正社員)募集</h1>
-      <p class="mv-work-pickup mt5 is-anime left">
-        元気に仕事に取り組むことが<br />できる方募集！
-      </p>
-    </div>
-  </div>
-</div>
-<!-- /mv-work -->
-
+{% include work/mv.html id="work02" h1="10ｔトラック事業"
+catch-copy="入社後免許取得可能！<br />未経験でも高収入のチャンス！" %}
 <main class="p-work pb100">
-  <div class="bgc-bg">
-    <div class="work-point container is-anime up">
-      <ul class="work-point-list mt30-sp">
-        <li class="work-point-price">
-          <div class="price-inner">月給<span>32</span>万円〜</div>
-        </li>
-        <li class="work-point-benefit">各種社会保険完備</li>
-        <li class="work-point-note">
-          就職後資格取得制度が<br class="is-pc" />あるから未経験でも安心
-        </li>
-      </ul>
-
-      <div class="work-point-wrap container-L">
-        <div class="work-point-content">
-          <h2 class="work-point-head t-ctr-sp">ドライバー募集</h2>
-          <p class="mt30">
-            具体的な仕事内容としては、4t車、10t車に乗務して全国各地へ荷物をお届けすること。定期便とフリー便(スポット便)を担当していただきます。帰り便での集荷もお任せ致します。入社後まずは先輩ドライバーの運転するトラックに横乗りして、仕事の進め方や配送ルートなどを覚えてください。走行距離は長くなりますが、無理のない運行管理を行っていますから、経験が浅い方も安心です。興味がある方はぜひ一度ご連絡ください。
-          </p>
-        </div>
-        <div class="work-point-thum">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="{{ '/assets/images/work/work-thum.webp' | relative_url }}"
-            />
-            <source
-              srcset="{{ '/assets/images/work/work-thum.jpg' | relative_url }}"
-            />
-            <img
-              src="{{ '/assets/images/work/work-thum.jpg' | relative_url }}"
-              alt="クロノス"
-            />
-          </picture>
-        </div>
-      </div>
-      <!-- /work-point-wrap -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /bgc-bg -->
+  {% include work/label.html price="月給<span>35</span>万円〜"
+  benefit="各種社会保険完備" work-point-head="配送スタッフ募集"
+  work-point-content="運送業界でのキャリアを築きませんか？私たちは10t車両を使用した一般雑貨と食品の輸送スタッフを募集しています。大型車両での輸送業務を担い、荷物の積み込みから効率的な運搬、荷降ろしまでを行います。特に食品輸送では温度管理や衛生面に注意が必要です。未経験者も歓迎し、研修で必要なスキルを身につけられます。チームワークを重視し、スタッフの成長をサポートします。"
+  %}
 
   <section class="mt-sec container">
     <h2 class="h-2"><span>業務内容</span></h2>
-
     <div class="work-summary mt50">
       <div class="work-summary-thum">
         <picture>
@@ -114,9 +39,12 @@ description: ドライバー(正社員)募集ページです。クロノスは�
         </picture>
       </div>
       <div class="work-summary-content">
-        <h3 class="f-L f-bold">4t、10tのフリー便</h3>
+        <h3 class="f-L f-bold">１０ｔ車両での一般雑貨の近郊の配達</h3>
         <p class="mt15">
-          4t車や10t車に乗務して全国各地へ荷物をお届けしていただきます。帰り便では集荷もお任せすることがあります。一人で業務に取り組みたい、といった方にはぴったりのポジションです。
+          運送業界での大きな挑戦を始めてみませんか？当社では現在、10t車両を用いた一般雑貨の近郊配達スタッフを積極的に募集しています。この仕事では、日常生活に不可欠なさまざまな雑貨を、近郊地域のお客様のもとへ安全かつ迅速に届ける重要な役割を担います。<br />
+          10t車両での配達は、その規模と範囲の広さが特徴です。日用品から特殊なアイテムまで、多岐にわたる商品を運ぶことになります。業務内容は、商品の適切な積み込みから始まり、効率的なルートでの配達、そして丁寧な荷下ろしとお客様への直接手渡しが含まれます。<br />
+          未経験の方も心配はいりません。10t車両の操作技術や安全な運転方法、荷物の取り扱い方など、基本から学べる研修制度を完備しています。チームワークを重視し、一人ひとりの成長を大切にする職場環境です。
+          私たちと一緒に、10t車両を駆使した近郊配達業務に挑戦し、運送業界での新たなキャリアを築きましょう！
         </p>
       </div>
     </div>
@@ -138,14 +66,15 @@ description: ドライバー(正社員)募集ページです。クロノスは�
         </picture>
       </div>
       <div class="work-summary-content">
-        <h3 class="f-L f-bold">4t、10tの定期便</h3>
+        <h3 class="f-L f-bold">１０ｔ車両での食品配達業務</h3>
         <p class="mt15">
-          4t車や10t車に乗務して全国各地の取引先へ荷物をお届けしていただきます。帰り便では集荷もお任せすることがあります。無理のない運行管理をしていますから、ゆとりをもって勤務していただけます。
+          運送業界での食品配達に特化したキャリアを展開しませんか？現在、当社では10t車両を使用した食品配達業務のスタッフを募集しています。この仕事は、新鮮な食品をお客様のもとへ届ける責任ある役割を担い、社会に不可欠なサービスを提供することになります。<br />
+          この職種の特長は、大型車両を駆使した食品の輸送にあります。業務内容は、品質を保つための適切な温度管理から始まり、商品の丁寧な積み込み、計画的なルートでの効率的な配達、そしてお客様のもとでの細心の注意を払った荷下ろしが含まれます。<br />
+          食品配達では、衛生管理や安全な取り扱いに対する深い理解が必要です。未経験の方も、専門的な知識と技術を身につけるための研修制度が整っています。私たちはチームワークを重視し、スタッフ一人ひとりの成長をサポートします。
+          一緒に10t車両での食品配達業務に挑戦し、運送業界での新たな道を歩みましょう！
         </p>
       </div>
     </div>
-    <!-- /work-summary -->
-
     <a class="btn btn-ctr mt-sec" href="{{ '/work' | relative_url }}"
       ><span>職種紹介の一覧へ</span></a
     >

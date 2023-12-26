@@ -1,6 +1,6 @@
 ---
-title: ２ｔトラック事業
-description: 配送スタッフ(正社員)募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
+title: ２ｔトラックドライバー募集
+description: ２ｔトラックドライバー募集ページです。株式会社クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
 <div class="header-h"></div>
@@ -14,89 +14,18 @@ description: 配送スタッフ(正社員)募集ページです。クロノス�
   </nav>
 </div>
 
-<div class="mv-page mv-work mt20">
-  <div class="mv-thum is-anime fade">
-    <picture>
-      <source
-        type="image/webp"
-        srcset="{{ '/assets/images/work/work01-mv_pc.webp' | relative_url }}"
-        media="(min-width: 768px)"
-      />
-      <source
-        type="image/webp"
-        srcset="{{ '/assets/images/work/work01-mv_sp.webp' | relative_url }}"
-        media="(max-width: 768.1px)"
-      />
-      <source
-        srcset="{{ '/assets/images/work/work01-mv_pc.jpg' | relative_url }}"
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="{{ '/assets/images/work/work01-mv_sp.jpg' | relative_url }}"
-        media="(max-width: 768.1px)"
-      />
-      <img
-        src="{{ '/assets/images/work/work01-mv_pc.jpg' | relative_url }}"
-        alt="クロノス"
-      />
-    </picture>
-  </div>
-  <div class="mv-work-content">
-    <div class="mv-work-wrap">
-      <h1 class="mv-work-title is-anime left">２ｔトラック事業</h1>
-      <p class="mv-work-pickup mt5 is-anime left">
-        入社後免許取得可能！<br />未経験でも高収入のチャンス！
-      </p>
-    </div>
-  </div>
-</div>
+{% include work/mv.html id="work01" h1="２ｔトラック事業"
+catch-copy="入社後免許取得可能！<br />未経験でも高収入のチャンス！" %}
 <!-- /mv-work -->
 
 <main class="p-work pb100">
-  <div class="bgc-bg">
-    <div class="work-point container is-anime up">
-      <ul class="work-point-list mt30-sp">
-        <li class="work-point-price">
-          <div class="price-inner">月給<span>30</span>万円〜</div>
-        </li>
-        <li class="work-point-benefit">各種社会保険完備</li>
-        <li class="work-point-note">
-          元気に働いてくれる方なら<br />未経験でもOK
-        </li>
-      </ul>
-
-      <div class="work-point-wrap container-L">
-        <div class="work-point-content">
-          <h2 class="work-point-head t-ctr-sp">配送スタッフ募集</h2>
-          <p class="mt30">
-            運送業界での新たなキャリアを始めませんか？当社では2tトラック事業の配送スタッフを募集しています。未経験の方でも大歓迎！入社後に免許の取得が可能ですので、経験がなくても安心してスタートできます。しっかりとした評価制度で高収入のチャンスもあります。各種社会保険も完備しており、安定した生活を送ることができます。私たちは活気に満ちた環境で、元気に働くスタッフを求めています。未経験からプロへと成長できるチャンスを掴み、運送業界での新しい道を歩みましょう！
-          </p>
-        </div>
-        <div class="work-point-thum">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="{{ '/assets/images/work/work-thum.webp' | relative_url }}"
-            />
-            <source
-              srcset="{{ '/assets/images/work/work-thum.jpg' | relative_url }}"
-            />
-            <img
-              src="{{ '/assets/images/work/work-thum.jpg' | relative_url }}"
-              alt="クロノス"
-            />
-          </picture>
-        </div>
-      </div>
-      <!-- /work-point-wrap -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /bgc-bg -->
-
+  {% include work/label.html price="月給<span>28</span>万円〜"
+  benefit="各種社会保険完備" work-point-head="配送スタッフ募集"
+  work-point-content="
+  運送業界での新たなキャリアを始めませんか？当社では2tトラック事業の配送スタッフを募集しています。未経験の方でも大歓迎！入社後に免許の取得が可能ですので、経験がなくても安心してスタートできます。しっかりとした評価制度で高収入のチャンスもあります。各種社会保険も完備しており、安定した生活を送ることができます。私たちは活気に満ちた環境で、元気に働くスタッフを求めています。未経験からプロへと成長できるチャンスを掴み、運送業界での新しい道を歩みましょう！"
+  %}
   <section class="mt-sec container is-anime up">
     <h2 class="h-2"><span>業務内容</span></h2>
-
     <div class="work-summary mt50">
       <div class="work-summary-thum">
         <picture>
@@ -116,7 +45,7 @@ description: 配送スタッフ(正社員)募集ページです。クロノス�
       <div class="work-summary-content">
         <h3 class="f-L f-bold">家電配送・家具配送</h3>
         <p class="mt15">
-          運送業界での新たなキャリアを築くチャンス！当社では活気あるチームで、家電や家具の配送スタッフを募集しています。この仕事では、2tトラックを使用して、お客様のもとへ大切な家電や家具を届ける重要な役割を担います。<br>未経験の方も大歓迎！入社後には、必要な免許取得のためのサポートがあり、運転経験がない方でも安心してスタートできます。各種社会保険も完備しており、安定した環境の中で働くことが可能です。<br>私たちのチームは元気とやる気に溢れており、同じ目標に向かって協力し合います。家電や家具の配送という責任感のある仕事を通じて、お客様の生活に直接貢献することができます。日々の業務は、商品の積み込み、安全な運搬、丁寧な配達と設置など、多岐にわたります。<br>未経験から始めて、運送業界のプロフェッショナルへと成長する道がここにあります。運送業界での新しい一歩を、私たちと共に踏み出しましょう！
+          運送業界での新たなキャリアを築くチャンス！当社では活気あるチームで、家電や家具の配送スタッフを募集しています。この仕事では、2tトラックを使用して、お客様のもとへ大切な家電や家具を届ける重要な役割を担います。<br />未経験の方も大歓迎！入社後には、必要な免許取得のためのサポートがあり、運転経験がない方でも安心してスタートできます。各種社会保険も完備しており、安定した環境の中で働くことが可能です。<br />私たちのチームは元気とやる気に溢れており、同じ目標に向かって協力し合います。家電や家具の配送という責任感のある仕事を通じて、お客様の生活に直接貢献することができます。日々の業務は、商品の積み込み、安全な運搬、丁寧な配達と設置など、多岐にわたります。<br />未経験から始めて、運送業界のプロフェッショナルへと成長する道がここにあります。運送業界での新しい一歩を、私たちと共に踏み出しましょう！
         </p>
       </div>
     </div>
@@ -140,17 +69,20 @@ description: 配送スタッフ(正社員)募集ページです。クロノス�
       <div class="work-summary-content">
         <h3 class="f-L f-bold">引っ越しから家具移動サービス</h3>
         <p class="mt15">
-          運送業界での新しい挑戦を始めませんか？当社では、引っ越しサービスと家具の移動サービスを担うスタッフを募集しています。この仕事では、家庭やオフィスの大切な荷物を丁寧に移動させる責任ある役割を果たします。<br>未経験の方も心配無用！入社後には、運送業界に必要な技術や知識を学ぶ機会があります。チームワークを大切にし、安心して業務に取り組むことができる環境を提供します。また、各種社会保険の完備もあり、安定した働き方が可能です。<br>業務内容は、お客様の引っ越しをサポートすることから始まります。家具や家電製品の梱包、運搬、新居での設置まで、一連の流れを丁寧に行います。また、家具の移動サービスでは、お客様のニーズに合わせて家具を安全に移動させる技術が求められます。<br>未経験からスタートし、引っ越しと家具移動のプロフェッショナルへと成長するチャンスがあります。お客様の新しい生活のスタートを支えるやりがいのある仕事を一緒に始めましょう！
+          運送業界での新しい挑戦を始めませんか？当社では、引っ越しサービスと家具の移動サービスを担うスタッフを募集しています。この仕事では、家庭やオフィスの大切な荷物を丁寧に移動させる責任ある役割を果たします。<br />未経験の方も心配無用！入社後には、運送業界に必要な技術や知識を学ぶ機会があります。チームワークを大切にし、安心して業務に取り組むことができる環境を提供します。また、各種社会保険の完備もあり、安定した働き方が可能です。<br />業務内容は、お客様の引っ越しをサポートすることから始まります。家具や家電製品の梱包、運搬、新居での設置まで、一連の流れを丁寧に行います。また、家具の移動サービスでは、お客様のニーズに合わせて家具を安全に移動させる技術が求められます。<br />未経験からスタートし、引っ越しと家具移動のプロフェッショナルへと成長するチャンスがあります。お客様の新しい生活のスタートを支えるやりがいのある仕事を一緒に始めましょう！
         </p>
       </div>
     </div>
     <!-- /work-summary -->
 
     <div class="grid grid-btn-double mt-sec is-anime up">
-      <a class="btn btn-black btn-ctr" href="{{ '/work' | relative_url }}"><span>職種紹介の一覧へ</span></a>
-      <a class="btn btn-ctr" href="{{ '/recruit' | relative_url }}"><span>募集要項の一覧へ</span></a>
+      <a class="btn btn-black btn-ctr" href="{{ '/work' | relative_url }}"
+        ><span>職種紹介の一覧へ</span></a
+      >
+      <a class="btn btn-ctr" href="{{ '/recruit' | relative_url }}"
+        ><span>募集要項の一覧へ</span></a
+      >
     </div>
-
   </section>
   <!-- /業務内容 -->
 </main>

@@ -1,0 +1,34 @@
+<div class="mv-page mv-work mt20">
+  <div class="mv-thum is-anime fade">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/work/' | append: include.id | append: '-mv_pc.webp' | relative_url }}"
+        media="(min-width: 768px)"
+      />
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/work/' | append: include.id | append: '-mv_sp.webp' | relative_url }}"
+        media="(max-width: 768.1px)"
+      />
+      <source
+        srcset="{{ '/assets/images/work/' | append: include.id | append: '-mv_pc.jpg' | relative_url }}"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="{{ '/assets/images/work/' | append: include.id | append: '-mv_sp.jpg' | relative_url }}"
+        media="(max-width: 768.1px)"
+      />
+      <img
+        src="{{ '/assets/images/work/' | append: include.id | append: '-mv_pc.jpg' | relative_url }}"
+        alt="クロノスの仕事"
+      />
+    </picture>
+  </div>
+  <div class="mv-work-content">
+    <div class="mv-work-wrap">
+      <h1 class="mv-work-title is-anime left">{{include.h1}}</h1>
+      <p class="mv-work-pickup mt5 is-anime left">{{include.catch-copy}}</p>
+    </div>
+  </div>
+</div>
