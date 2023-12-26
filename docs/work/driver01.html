@@ -3,6 +3,7 @@ title: 2tトラック
 description: 2tトラックドライバー募集ページです。株式会社クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
+{% comment %} findだと何故か本番でbuildした時に動かないためwhereを使用すること {% endcomment %}
 {% assign jobData = site.data.chronos_jobs | where: "title", page.title | first %}
 {% assign pageTitle = page.title %}
 <div class="header-h"></div>
