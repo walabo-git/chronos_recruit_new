@@ -4,11 +4,10 @@ description: 2tトラックドライバー募集ページです。株式会社�
 ---
 
 {% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
-{% assign pageId = jobData.img_id %}
 {% assign pageTitle = page.title %}
 <div class="header-h"></div>
 {% include work/breadcrumb.html page-title=pageTitle %}
-{% include work/mv.html id=pageId h1=pageTitle catch-copy=jobData.comment %}
+{% include work/mv.html id=jobData.img_id h1=pageTitle catch-copy=jobData.comment %}
 <main class="p-work pb100">
   {% include 
     work/label.html 
@@ -21,13 +20,13 @@ description: 2tトラックドライバー募集ページです。株式会社�
     <h2 class="h-2"><span>業務内容</span></h2>
     {% include
       work/work-summary.html
-      id=pageId
+      id=jobData.img_id
       summary-title="家電配送・家具配送"
       summary-content="運送業界での新たなキャリアを築くチャンス！当社では活気あるチームで、家電や家具の配送スタッフを募集しています。この仕事では、2tトラックを使用して、お客様のもとへ大切な家電や家具を届ける重要な役割を担います。<br />未経験の方も大歓迎！入社後には、必要な免許取得のためのサポートがあり、運転経験がない方でも安心してスタートできます。各種社会保険も完備しており、安定した環境の中で働くことが可能です。<br />私たちのチームは元気とやる気に溢れており、同じ目標に向かって協力し合います。家電や家具の配送という責任感のある仕事を通じて、お客様の生活に直接貢献することができます。日々の業務は、商品の積み込み、安全な運搬、丁寧な配達と設置など、多岐にわたります。<br />未経験から始めて、運送業界のプロフェッショナルへと成長する道がここにあります。運送業界での新しい一歩を、私たちと共に踏み出しましょう！"
     %}
     {% include 
       work/work-summary-rev.html
-      id=pageId
+      id=jobData.img_id
       summary-title="引っ越しから家具移動サービス"
       summary-content="運送業界での新しい挑戦を始めませんか？当社では、引っ越しサービスと家具の移動サービスを担うスタッフを募集しています。この仕事では、家庭やオフィスの大切な荷物を丁寧に移動させる責任ある役割を果たします。<br />未経験の方も心配無用！入社後には、運送業界に必要な技術や知識を学ぶ機会があります。チームワークを大切にし、安心して業務に取り組むことができる環境を提供します。また、各種社会保険の完備もあり、安定した働き方が可能です。<br />業務内容は、お客様の引っ越しをサポートすることから始まります。家具や家電製品の梱包、運搬、新居での設置まで、一連の流れを丁寧に行います。また、家具の移動サービスでは、お客様のニーズに合わせて家具を安全に移動させる技術が求められます。<br />未経験からスタートし、引っ越しと家具移動のプロフェッショナルへと成長するチャンスがあります。お客様の新しい生活のスタートを支えるやりがいのある仕事を一緒に始めましょう！"
     %}
