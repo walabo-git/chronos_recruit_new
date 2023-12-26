@@ -3,7 +3,8 @@ title: 10tトラック
 description: 10tトラックドライバー募集ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。
 ---
 
-{% assign jobData = site.data.chronos_jobs | find: "title", page.title %}
+{% comment %} findだと何故か本番でbuildした時に動かないためwhereを使用すること {% endcomment %}
+{% assign jobData = site.data.chronos_jobs | where: "title", page.title | first %}
 {% assign pageId = jobData.img_id %}
 {% assign pageTitle = page.title %}
 <div class="header-h"></div>
