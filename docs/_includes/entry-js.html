@@ -10,7 +10,7 @@
     const jobType = params.get("job") || "";
     if (!jobType) return;
     const selectJobs = document.querySelector("select[name=entry-job]");
-    const option = selectJobs.querySelector(`option[value=${jobType}]`);
+    const option = selectJobs.querySelector(`option[value="${jobType}"]`);
     option.selected = true;
   };
 
@@ -50,6 +50,11 @@
     formData.forEach((value, key) => {
       object[key] = object[key] ? [...object[key], value] : value;
     });
+
+    const selectedJob = [...document.querySelectorAll('option')].find((s)=> s.selected).innerHTML
+    if (selectedJob !== '職種を選択する') {
+      object['entry-job-ja'] = selectedJob
+    }
 
     return JSON.stringify(object);
   }

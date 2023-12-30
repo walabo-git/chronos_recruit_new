@@ -59,7 +59,7 @@ sitemap: false
           <select name="entry-job">
             <option value="">職種を選択する</option>
             {% for job in site.data.recruits %}
-              <option value="{{ job.title }}">{{ job.title }}</option>
+              <option value="{{ job.id }}-{{ job.recruit_type }}">{{ job.title }}</option>
             {% endfor %}
             <option value="other">その他</option>
           </select>

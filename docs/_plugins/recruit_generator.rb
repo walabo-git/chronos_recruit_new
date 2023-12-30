@@ -17,7 +17,7 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'recruit.html')
       self.data['json_ld_path'] = "#{recruit['recruit_type']}/#{recruit['id']}"
       self.data['description'] = "#{recruit['title']}の募集要項ページです。クロノスは常にワクワクする気持ちを大切にするやりがいや充実感を感じることができる仲間が集まる企業です。"
-      self.data['job_param'] = recruit['title']
+      self.data['job_param'] = "#{recruit['id']}-#{recruit['recruit_type']}"
       recruit.each do |key, value|
         self.data[key] = value
       end
