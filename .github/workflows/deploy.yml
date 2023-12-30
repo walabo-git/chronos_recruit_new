@@ -37,6 +37,8 @@ jobs:
           destination: ./docs/_site
           verbose: true
       - name: Upload artifact
+        with:
+          path: ./docs/_site
         uses: actions/upload-pages-artifact@v3
 
   # Deployment job

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   {% capture robots %}{{page.robots}}{% endcapture %}
-  {% comment %} {% assign jobPath = page.job-id %} {% endcomment %}
-  {% comment %} {% capture jsonldPath %}{% if page.job-id %}jsonld/{{page.job-id}}.html{% endif %}{% endcapture %} {% endcomment %}
   {% if page.json_ld_path %}
     {% capture jsonldPath %}jsonld/{{page.json_ld_path}}.html{% endcapture %}
     {% include head-common.html jsonld-path=jsonldPath robots=robots %}
@@ -44,7 +42,7 @@
                     <a href="{{ '/about' | relative_url }}">クロノスを知る</a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ '/message' | relative_url }}">代表メッセージ</a>
+                    <a href="{{ '/message' | relative_url }}">代表メッセージです</a>
                   </li>
                 </ul>
                 <div class="nav-head mt60-pc mt20-sp">
