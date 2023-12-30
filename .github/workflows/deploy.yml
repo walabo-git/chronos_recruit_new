@@ -18,7 +18,7 @@ jobs:
       - name: Build and deploy
         run: |
           mkdir -p ./docs/_site
-          mkdir -p ./docs/.jekyll-cache
+          mkdir -p ./docs/.jekyll-cache/Jekyll
           jekyll build -s ./docs -d ./docs/_site
           touch ./docs/_site/.nojekyll
 
