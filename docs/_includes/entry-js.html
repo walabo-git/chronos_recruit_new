@@ -5,12 +5,6 @@
 {% endif %}
 
 <script type="text/javascript">
-  const jobCategory = {
-  {% for job in site.data.recruit_jobs %}
-    "{{ job.recruit_type }}/{{ job.id }}": "{{ job.title }}",
-  {% endfor %}
-  };
-
   const selectInitializer = () => {
     const params = new URL(document.location).searchParams;
     const jobType = params.get("job") || "";
@@ -57,8 +51,6 @@
       object[key] = object[key] ? [...object[key], value] : value;
     });
 
-    const entryJobJa = jobCategory[object["entry-job"]];
-    if (entryJobJa) object["entry-job-ja"] = entryJobJa;
     return JSON.stringify(object);
   }
 </script>

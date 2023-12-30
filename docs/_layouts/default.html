@@ -9,7 +9,7 @@
   {% endif %}
   <body>
     <div class="entry-btn">
-      <a href="{{ '/entry'|  append: '?job=' | append: jobPath | relative_url }}"
+      <a href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}"
         ><span>エントリーする</span></a
       >
     </div>

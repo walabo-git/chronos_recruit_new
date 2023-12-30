@@ -58,12 +58,9 @@ sitemap: false
           <p class="form-head">募集職種</p>
           <select name="entry-job">
             <option value="">職種を選択する</option>
-            <option value="delivery-b">家電配送チーフアシスタント</option>
-            <option value="delivery-a">家電配送アシスタントスタッフ</option>
-            <option value="driver-4t-b">地場ドライバー４ｔ（定期便）</option>
-            <option value="driver-4t-a">地場ドライバー４ｔ</option>
-            <option value="tire-maintenance">タイヤ交換作業</option>
-            <option value="tire-sales">タイヤ販売営業</option>
+            {% for job in site.data.recruits %}
+              <option value="{{ job.title }}">{{ job.title }}</option>
+            {% endfor %}
             <option value="other">その他</option>
           </select>
         </div>
