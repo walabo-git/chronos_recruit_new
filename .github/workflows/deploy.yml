@@ -15,7 +15,8 @@ jobs:
 
       - name: Build and deploy
         run: |
-          mkdir .jekyll-cache _site
+          mkdir -p docs/.jekyll-cache
+          mkdir -p docs/_site
           docker run --rm -v ${{ github.workspace }}/docs:/srv/jekyll jekyll/builder:latest jekyll build
           touch ./docs/_site/.nojekyll
 
