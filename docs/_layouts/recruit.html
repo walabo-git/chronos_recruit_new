@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<div class="header-h"></div>
+<div class="mv-page">
+  <div class="mv-thum is-anime fade">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/common/p-mv_pc.webp' | relative_url }}"
+        media="(min-width: 768px)"
+      />
+      <source
+        type="image/webp"
+        srcset="{{ '/assets/images/common/p-mv_sp.webp' | relative_url }}"
+        media="(max-width: 768.1px)"
+      />
+      <source
+        srcset="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="{{ '/assets/images/common/p-mv_sp.jpg' | relative_url }}"
+        media="(max-width: 768.1px)"
+      />
+      <img
+        src="{{ '/assets/images/common/p-mv_pc.jpg' | relative_url }}"
+        alt="クロノス"
+      />
+    </picture>
+  </div>
+  <div class="mv-content">
+    <div class="mv-title container">
+      <p class="mv-en is-anime zoom">RECRUIT</p>
+      <h1 class="mv-ja is-anime up">
+        {{page.title}}<br />募集要項・選考フロー
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <nav class="breadcrumb">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">TOP</a></li>
+      <li>{{page.title}}</li>
+    </ul>
+  </nav>
+</div>
+
+<main class="p-rectuit container pb100">
+  <section class="container-L mt-sec is-anime up">
+    <h2 class="h-3">募集要項</h2>
+    <div class="table mt40">
+      {% include recruit/{{page.recruit_type}}/{{page.id}}_table.html %}
+    </div>
+  </section>
+  {% include entry-flow.html tel=page.tel manager=page.manager %}
+</main>

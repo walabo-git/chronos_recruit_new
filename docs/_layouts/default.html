@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
-  {% capture robots %}{{page.robots}}{% endcapture %}{% capture jsonId
-  %}{{page.job-id}}{% endcapture %}{% capture jsonldPath %}{% if page.job-id
-  %}jsonld/{{page.job-id}}.html{% endif %}{% endcapture %}{% include
-  head-common.html jsonld-path=jsonldPath robots=robots %}
+  {% capture robots %}{{page.robots}}{% endcapture %}
+  {% comment %} {% assign jobPath = page.job-id %} {% endcomment %}
+  {% comment %} {% capture jsonldPath %}{% if page.job-id %}jsonld/{{page.job-id}}.html{% endif %}{% endcapture %} {% endcomment %}
+  {% if page.json_ld_path %}
+    {% capture jsonldPath %}jsonld/{{page.json_ld_path}}.html{% endcapture %}
+    {% include head-common.html jsonld-path=jsonldPath robots=robots %}
+  {% else %}
+    {% include head-common.html robots=robots %}
+  {% endif %}
   <body>
     <div class="entry-btn">
-      <a href="{{ '/entry'|  append: '?job=' | append: jsonId | relative_url }}"
+      <a href="{{ '/entry'|  append: '?job=' | append: jobPath | relative_url }}"
         ><span>エントリーする</span></a
       >
     </div>

@@ -1,0 +1,87 @@
+- title: 家電配送チーフアシスタント【正社員】
+  recruit_type: full_time
+  id: delivery-b
+  tel: 080-8264-2037
+  manager: 清橋（きよはし）
+  salary: 月給32万円 + 歩合<br />月給28万円 + 歩合（研修期間）
+  salary_value: 320000
+
+- title: 地場ドライバー４ｔ（定期便）【正社員】
+  recruit_type: full_time
+  id: driver-4t-b
+  tel: 090-6925-8818
+  manager: 野原（のはら）
+  salary: 月給30万円 + 歩合
+  salary_value: 300000
+
+- title: 地場ドライバー４ｔ【正社員】
+  recruit_type: full_time
+  id: driver-4t-a
+  tel: 090-6925-8818
+  manager: 野原（のはら）
+  salary: 月給30万円 + 歩合
+  salary_value: 300000
+
+- title: タイヤ交換作業【正社員】
+  recruit_type: full_time
+  id: tire-maintenance
+  tel: 090-7694-5061
+  manager: 伊藤（いとう）
+  salary: 月給30万円 + 歩合
+  salary_value: 300000
+
+- title: タイヤ販売営業【正社員】
+  recruit_type: full_time
+  id: tire-sales
+  tel: 090-7694-5061
+  manager: 伊藤（いとう）
+  salary: 月給30万円 + 歩合
+  salary_value: 300000
+
+- title: 家電配送チーフアシスタント【アルバイト】
+  recruit_type: part_time
+  id: delivery-b
+  tel: 080-8264-2037
+  manager: 清橋（きよはし）
+  salary: 時給1,500円
+  salary_value: 1500
+
+- title: 家電配送アシスタントスタッフ【アルバイト】
+  recruit_type: part_time
+  id: delivery-a
+  tel: 080-8264-2037
+  manager: 清橋（きよはし）
+  salary: 時給1,250円
+  salary_value: 1250
+
+- title: 地場ドライバー４ｔ（定期便）【アルバイト】
+  recruit_type: part_time
+  id: driver-4t-b
+  tel: 090-6925-8818
+  manager: 野原（のはら）
+  salary: 時給1,500円
+  salary_value: 1500
+
+- title: 地場ドライバー４ｔ【アルバイト】
+  recruit_type: part_time
+  id: driver-4t-a
+  tel: 090-6925-8818
+  manager: 野原（のはら）
+  salary: 時給1,500円
+  salary_value: 1500
+
+- title: タイヤ交換作業【アルバイト】
+  recruit_type: part_time
+  id: tire-maintenance
+  tel: 090-7694-5061
+  manager: 伊藤（いとう）
+  salary: 時給1,250円
+  salary_value: 1250
+
+- title: タイヤ販売営業【アルバイト】
+  recruit_type: part_time
+  id: tire-sales
+  tel: 090-7694-5061
+  manager: 伊藤（いとう）
+  salary: 時給1,250円
+  salary_value: 1250

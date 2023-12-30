@@ -1,18 +1,14 @@
-{% if jekyll.environment == "production" %} {% capture postUrl
-%}https://3hv40o6c8h.execute-api.ap-northeast-1.amazonaws.com/prod/send-email{%
-endcapture %} {% else %} {% capture postUrl
-%}https://2wzc671fxa.execute-api.ap-northeast-1.amazonaws.com/stg/send-email{%
-endcapture %} {% endif %}
+{% if jekyll.environment == "production" %}
+{% capture postUrl %}https://3hv40o6c8h.execute-api.ap-northeast-1.amazonaws.com/prod/send-email{% endcapture %}
+{% else %}
+{% capture postUrl %}https://2wzc671fxa.execute-api.ap-northeast-1.amazonaws.com/stg/send-email{% endcapture %}
+{% endif %}
 
 <script type="text/javascript">
   const jobCategory = {
-    "delivery-b": "家電配送チーフアシスタント",
-    "delivery-a": "家電配送アシスタントスタッフ",
-    "driver-4t-b": "地場ドライバー４ｔ（定期便）",
-    "driver-4t-a": "地場ドライバー４ｔ",
-    "tire-maintenance": "タイヤ交換作業",
-    "tire-sales": "タイヤ販売営業",
-    other: "その他",
+  {% for job in site.data.recruit_jobs %}
+    "{{ job.recruit_type }}/{{ job.id }}": "{{ job.title }}",
+  {% endfor %}
   };
 
   const selectInitializer = () => {
