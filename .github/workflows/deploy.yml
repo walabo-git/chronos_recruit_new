@@ -9,17 +9,14 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    container: jekyll/jekyll:latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Build and deploy
         run: |
-          mkdir -p ./docs/_site
-          mkdir -p /tmp/.jekyll-cache
-          jekyll build -s ./docs -d ./docs/_site --trace --config ./docs/_config.yml,./docs/_config_ci.yml
+          mkdir .jekyll-cache _site
+          docker run --rm -v ${{ github.workspace }}:/srv/jekyll jekyll/builder:latest jekyll build
           touch ./docs/_site/.nojekyll
 
       - name: Upload artifact
