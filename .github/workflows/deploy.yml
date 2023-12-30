@@ -15,6 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set Jekyll cache directory
+        run: echo "JEKYLL_CACHE_DIR=/tmp/.jekyll-cache" >> $GITHUB_ENV
+
       - name: Build and deploy
         run: |
           mkdir -p ./docs/_site
