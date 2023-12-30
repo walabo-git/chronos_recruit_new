@@ -15,14 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set Jekyll cache directory
-        run: echo "JEKYLL_CACHE_DIR=/tmp/.jekyll-cache" >> $GITHUB_ENV
-
       - name: Build and deploy
         run: |
           mkdir -p ./docs/_site
-          mkdir -p ./docs/.jekyll-cache/Jekyll/Cache
-          jekyll build -s ./docs -d ./docs/_site
+          mkdir -p /tmp/.jekyll-cache
+          jekyll build -s ./docs -d ./docs/_site --trace --config ./docs/_config.yml,./docs/_config_ci.yml
           touch ./docs/_site/.nojekyll
 
       - name: Upload artifact
