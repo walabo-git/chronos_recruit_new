@@ -3,7 +3,7 @@
   id: delivery-b
   tel: 080-8264-2037
   manager: 清橋（きよはし）
-  salary: 月給32万円 + 歩合<br />月給28万円 + 歩合（研修期間）
+  salary: 月給32万円 + 歩合
   salary_value: 320000
 
 - title: 地場ドライバー４ｔ（定期便）【正社員】
@@ -27,16 +27,16 @@
   id: tire-maintenance
   tel: 090-7694-5061
   manager: 伊藤（いとう）
-  salary: 月給30万円 + 歩合
-  salary_value: 300000
+  salary: 月給25万円 + 歩合
+  salary_value: 250000
 
 - title: タイヤ販売営業【正社員】
   recruit_type: full_time
   id: tire-sales
   tel: 090-7694-5061
   manager: 伊藤（いとう）
-  salary: 月給30万円 + 歩合
-  salary_value: 300000
+  salary: 月給25万円 + 歩合
+  salary_value: 250000
 
 - title: 家電配送チーフアシスタント【アルバイト】
   recruit_type: part_time
