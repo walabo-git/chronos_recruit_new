@@ -7,7 +7,12 @@ services:
     container_name: local_jekyll
     volumes:
       - ./docs:/srv/jekyll
-    command: jekyll serve -s /srv/jekyll --livereload
+    command: >
+      /bin/bash -c "
+        mkdir -p /srv/jekyll/.jekyll-cache
+        mkdir -p /srv/jekyll/_site
+        jekyll serve -s /srv/jekyll --livereload
+      "
     init: true
     ports:
       - 4000:4000
