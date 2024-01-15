@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-  {% capture robots %}{{page.robots}}{% endcapture %}
+  {% assign robots = page.robots %}
+  {% assign logoH1 = page.logoH1 %}
   {% if page.json_ld_path %}
     {% capture jsonldPath %}jsonld/{{page.json_ld_path}}.html{% endcapture %}
     {% include head-common.html jsonld-path=jsonldPath robots=robots %}
@@ -9,26 +10,21 @@
   {% endif %}
   <body>
     <div class="entry-btn">
-      <a href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}"
-        ><span>エントリーする</span></a
-      >
+      <a href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}" >
+        <span>エントリーする</span>
+      </a>
     </div>
     <header class="header">
       <div class="header-inner">
-        <div class="header-title">
-          <a href="{{ '/' | relative_url }}" class="header-logo">
-            <img
-              src="{{ '/assets/images/svg/logo.svg' | relative_url }}"
-              alt="クロノス"
-            />
-          </a>
-          <div class="header-logo-sub">
-            <img
-              src="{{ '/assets/images/svg/logo-sub.svg' | relative_url }}"
-              alt="recruiting site"
-            />
+        {% if logoH1 %}
+          <h1 class="header-title">
+            {% include nav-logo.html %}
+          </h1>
+        {% else %}
+          <div class="header-title">
+            {% include nav-logo.html %}
           </div>
-        </div>
+        {% endif %}
         <nav class="nav" id="navMenu">
           <div class="nav-list" id="navList">
             <div class="nav-wrap">
