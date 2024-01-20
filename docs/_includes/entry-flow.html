@@ -9,14 +9,19 @@
       </p>
       <p class="f-L f-bold mt15">
         <a href="tel:{{include.tel}}"
-          >TEL : {{include.tel}}【担当：{{include.manager}}宛】</a
+          >TEL : {{include.tel}}<br />【担当：{{include.manager}}宛】</a
         >
       </p>
-      <a
-        class="btn mt20"
-        href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}"
-        ><span>エントリーフォームはこちら</span></a
-      >
+      <div class="entry-wrapper">
+        <a
+          class="btn mt20"
+          href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}"
+          ><span>エントリーフォームはこちら</span></a
+        >
+        <a class="btn mt20 line" href="https://lin.ee/aQlGbp3"
+          ><span>LINEで簡単エントリー</span></a
+        >
+      </div>
     </li>
     <li class="flow-item">
       <h2 class="h-4">2. 面接日決定</h2>
