@@ -30,6 +30,9 @@ footer
       top: calc(50% - 4px);
       right: calc(50% - 5px);
     }
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   .footer-logo{
@@ -37,7 +40,7 @@ footer
     height: auto;
     @include m-a;
   }
-  
+
   .footer-list{
     text-align: center;
     .footer-list-item{
