@@ -321,13 +321,13 @@
       font-weight: 600;
       background: var(--c-table);
       vertical-align: top;
-      @media (min-width: $tbwidth) {
+      @include mq(tb) {
         width: 220px;
       }
     }
     td {
       background: var(--c-white);
-      @media (min-width: $tbwidth) {
+      @include mq(tb) {
         padding-left: 2em;
       }
     }
@@ -404,29 +404,30 @@
   }
 } //.flow
 
-.entry-btn {
+.entry-btn{
   position: fixed;
+  display: grid;
   width: 100%;
-  background-color: var(--c-main);
+  grid-template-columns: repeat(2,1fr);
   &.entry-pc {
     top: 15px;
-    right: 130px;
+    right: 110px;
     z-index: 100;
   }
-  &.entry-sp {
+  &.entry-sp{
     bottom: 0;
     left: 0;
     z-index: 50;
   }
-  @include mq(sp) {
+  @media (max-width: 1000px) {
     width: 100%;
+    height: 60px;
+  }
+  @media (min-width: 1000.1px) {
+    width: 508px;
     height: 50px;
   }
-  @media (min-width: $tbwidth) {
-    width: 240px;
-    height: 50px;
-  }
-  a {
+  a{
     width: 100%;
     height: 100%;
     display: flex;
@@ -434,21 +435,55 @@
     justify-content: center;
     color: var(--c-white);
     line-height: 1;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
-    transition: 0.3s;
-    span {
-      position: relative;
-      padding-right: 1.5em;
-      &::after {
-        @include arrow(white);
+    position: relative;
+    padding-right: 20px;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+    @media (min-width: 1000.1px) {
+      font-size: 1.8rem;
+    }
+    span{
+      @media (max-width: 1000px) {
+        line-height: 1.4;
       }
     }
-    &:hover {
+    .entry-btn-choice{
+      @media (max-width: 1000px) {
+        font-size: 1.5rem;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      border-top: 3px solid var(--c-white);
+      border-right: 3px solid var(--c-white);
+      transform: translateY(-50%) rotate(45deg);
+      top: 50%;
+      right: 15px;
+      width: 10px;
+      height: 10px;
+      transition: .3s;
+    }
+  }
+  .entry-btn-form{
+    background-color: var(--c-main);
+    transition: .3s;
+    &:hover{
       background-color: var(--c-black);
     }
   }
-} //.entry-btn
+  .entry-btn-line{
+    background-color: var(--c-line);
+    transition: .3s;
+    &:hover{
+      background-color: var(--c-black);
+    }
+  }
+}//.entry-btn
 
 .entry-wrapper {
   display: flex;
@@ -456,7 +491,7 @@
   gap: 1.5rem;
 
   .btn.line {
-    background: #00b900;
+    background: var(--c-line);
     &:hover {
       background-color: var(--c-black);
     }

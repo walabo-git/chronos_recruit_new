@@ -10,9 +10,15 @@
   {% endif %}
   <body>
     <div class="entry-btn">
-      <a href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}" >
+      <!-- <a href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}" >
         <span>エントリーする</span>
-      </a>
+      </a> -->
+      <div class="entry-btn-form">
+        <a href="{{ '/entry'|  append: '?job=' | append: page.job_param | relative_url }}"><span class="entry-btn-choice">フォームから</span><span>エントリー</span></a>
+      </div>
+      <div class="entry-btn-line">
+        <a href="https://lin.ee/aQlGbp3"><span class="entry-btn-choice">LINEで簡単</span><span>エントリー</span></a>
+      </div>
     </div>
     <header class="header">
       <div class="header-inner">
@@ -108,7 +114,7 @@
     </header>
     {% include analytics-noscript.html %}{{ content }}
     <footer class="footer">
-      <div class="totop is-pc"></div>
+      <div class="totop"></div>
       <div class="container">
         <div class="footer-logo">
           <a href="/">
