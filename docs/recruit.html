@@ -62,13 +62,13 @@ description: 募集要項一覧についてのページです。クロノスは�
     </ul>
   </section>
   <section class="container-L mt-sec is-anime up">
-    <h2 class="h-3">アルバイト</h2>
+    <h2 class="h-3">パート・アルバイト</h2>
     <ul class="grid x2 mt15">
       {% for data in site.data.recruits %}
         {% if data.recruit_type == 'part_time' %}
         <li>
           <a class="btn-recruit" href="{{ '/recruit/' | append: data.recruit_type | append: '/' | append: data.id | relative_url }}"
-            >{{ data.title | remove: '【アルバイト】' }}</a
+            >{{ data.title | remove: '【パート・アルバイト】' }}</a
           >
         </li>
         {% endif %}

@@ -1,12 +1,12 @@
-- title: 家電配送チーフアシスタント【正社員】
+- title: 【正社員】輸送・配送ドライバー
   recruit_type: full_time
   id: delivery-b
   tel: 080-8264-2037
   manager: 清橋（きよはし）
-  salary: 月給29万円 + 歩合
+  salary: 月給29万円~月給40万円
   salary_value: 290000
 
-- title: 地場ドライバー４ｔ（定期便）【正社員】
+- title: 【正社員】地場ドライバー４ｔ（定期便）
   recruit_type: full_time
   id: driver-4t-b
   tel: 080-6925-8818
@@ -14,7 +14,7 @@
   salary: 月給30万円 + 歩合
   salary_value: 300000
 
-- title: 地場ドライバー４ｔ【正社員】
+- title: 【正社員】地場ドライバー４ｔ
   recruit_type: full_time
   id: driver-4t-a
   tel: 080-6925-8818
@@ -22,7 +22,7 @@
   salary: 月給30万円 + 歩合
   salary_value: 300000
 
-- title: タイヤ交換作業【正社員】
+- title: 【正社員】タイヤ交換作業
   recruit_type: full_time
   id: tire-maintenance
   tel: 090-7694-5061
@@ -30,7 +30,7 @@
   salary: 月給25万円 + 歩合
   salary_value: 250000
 
-- title: タイヤ販売営業【正社員】
+- title: 【正社員】タイヤ販売営業
   recruit_type: full_time
   id: tire-sales
   tel: 090-7694-5061
@@ -38,7 +38,7 @@
   salary: 月給25万円 + 歩合
   salary_value: 250000
 
-- title: 家電配送チーフアシスタント【アルバイト】
+- title: 【パート・アルバイト】家電配送チーフアシスタント
   recruit_type: part_time
   id: delivery-b
   tel: 080-8264-2037
@@ -46,7 +46,7 @@
   salary: 時給1,400円
   salary_value: 1400
 
-- title: 家電配送アシスタントスタッフ【アルバイト】
+- title: 【パート・アルバイト】輸送・配送サポート
   recruit_type: part_time
   id: delivery-a
   tel: 080-8264-2037
@@ -54,7 +54,7 @@
   salary: "時給1,200円<br />(研修期間: 時給1,100円)"
   salary_value: 1200
 
-- title: タイヤ交換作業【アルバイト】
+- title: 【パート・アルバイト】タイヤ交換作業
   recruit_type: part_time
   id: tire-maintenance
   tel: 090-7694-5061
@@ -62,7 +62,7 @@
   salary: 時給1,250円
   salary_value: 1250
 
-- title: タイヤ販売営業【アルバイト】
+- title: 【パート・アルバイト】タイヤ販売営業
   recruit_type: part_time
   id: tire-sales
   tel: 090-7694-5061
