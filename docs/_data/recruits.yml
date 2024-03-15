@@ -25,16 +25,16 @@
 - title: 【正社員】タイヤ交換作業
   recruit_type: full_time
   id: tire-maintenance
-  tel: 090-7694-5061
-  manager: 伊藤（いとう）
+  tel: 090-5869-9274
+  manager: 下田（しもだ）
   salary: 月給25万円 + 歩合
   salary_value: 250000
 
 - title: 【正社員】タイヤ販売営業
   recruit_type: full_time
   id: tire-sales
-  tel: 090-7694-5061
-  manager: 伊藤（いとう）
+  tel: 090-5869-9274
+  manager: 下田（しもだ）
   salary: 月給25万円 + 歩合
   salary_value: 250000
 
@@ -57,15 +57,15 @@
 - title: 【パート・アルバイト】タイヤ交換作業
   recruit_type: part_time
   id: tire-maintenance
-  tel: 090-7694-5061
-  manager: 伊藤（いとう）
+  tel: 090-5869-9274
+  manager: 下田（しもだ）
   salary: 時給1,250円
   salary_value: 1250
 
 - title: 【パート・アルバイト】タイヤ販売営業
   recruit_type: part_time
   id: tire-sales
-  tel: 090-7694-5061
-  manager: 伊藤（いとう）
+  tel: 090-5869-9274
+  manager: 下田（しもだ）
   salary: 時給1,250円
   salary_value: 1250
